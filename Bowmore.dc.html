@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bowmore — Work</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased}
+main>*{width:100%;box-sizing:border-box}
+html{scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+.next:hover{text-decoration:none}
+.lg{position:relative;isolation:isolate;overflow:hidden;background:rgba(255,255,255,0.10);-webkit-backdrop-filter:blur(22px) saturate(185%) brightness(1.06);backdrop-filter:blur(22px) saturate(185%) brightness(1.06);border:1px solid rgba(255,255,255,0.32);box-shadow:inset 0 1.5px 0 rgba(255,255,255,0.65),inset 0 -1px 0 rgba(255,255,255,0.18),inset 0 0 32px rgba(255,255,255,0.10),0 24px 64px rgba(0,0,0,0.28)}
+.lg::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:radial-gradient(120% 80% at 20% 0%,rgba(255,255,255,0.38),rgba(255,255,255,0) 55%),radial-gradient(90% 60% at 85% 110%,rgba(255,255,255,0.16),rgba(255,255,255,0) 60%);pointer-events:none}
+.lg-float{animation:lgfloat 9s ease-in-out infinite}
+@keyframes lgfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.thumb{transition:box-shadow .2s ease}
+.thumb[data-on]{box-shadow:inset 0 0 0 3px #1d1d1f}
+.next .media{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.next:hover .media{transform:scale(1.02)}
+@keyframes rise{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){
+.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
+}
+@media (prefers-reduced-motion: reduce){
+html{scroll-behavior:auto}
+.reveal{animation:none}
+.lg-float{animation:none}
+.next .media{transition:none}
+}
+</style>
+</helmet>
+<div style="background: #fbfbfd; color: #1d1d1f; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang TC', Inter, 'Noto Sans TC', sans-serif; min-height: 100vh">
+
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(251,251,253,0.78); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.1)">
+<nav aria-label="Project navigation" style="max-width: 1080px; margin: 0 auto; padding: 0 22px; min-height: 52px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px"><a href="./" style="font-size: 13px; color: rgb(110, 110, 115); padding: 14px 0px">‹ All Work</a><span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Bowmore</span><a href="Auchentoshan.dc.html" style="font-size: 13px; color: rgb(110, 110, 115); padding: 14px 0px">Next: Auchentoshan ›</a></nav>
+</header>
+
+
+
+<main id="top" style="">
+
+<section aria-labelledby="hero-h" style="position: relative; width: 100%; aspect-ratio: 16 / 9; min-height: 560px; max-height: 960px; overflow: hidden; background: #000000; color: #ffffff">
+<video ref="{{heroRef}}" src="assets/8afb2eaee84457500261251fddb14049.mp4" poster="assets/3a30fb935d3b2670476475c299d5cb02.jpg" muted="{{ true }}" autoPlay="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" onLoadedData="{{playHero}}" aria-hidden="true" tabIndex="-1" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block; object-fit: cover"></video>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(0,0,0,0.16); pointer-events: none"></div>
+<div style="position: absolute; left: {{glass.x}}; top: {{glass.y}}; transform: translate(-50%, -50%) scale({{glass.scale}}); transform-origin: center; pointer-events: none">
+<div class="lg lg-float" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: clamp(24px, 3.5vw, 44px) clamp(32px, 6vw, 80px); border-radius: clamp(32px, 4vw, 56px); text-align: center; white-space: nowrap; background: rgba(255,255,255,{{glass.tint}}); -webkit-backdrop-filter: blur({{glass.blur}}px) saturate(185%) brightness(1.06); backdrop-filter: blur({{glass.blur}}px) saturate(185%) brightness(1.06); width: 243px; height: 30px">
+<h1 id="hero-h" style="margin: 0; font-size: clamp(36px, 5.5vw, 80px); line-height: 1; font-weight: 700; letter-spacing: -0.03em; color: #ffffff; text-shadow: 0 2px 28px rgba(0,0,0,0.35)">Bowmore</h1>
+</div>
+</div>
+</section>
+
+<section aria-label="Project info" style="max-width: 1080px; margin: 0 auto; padding: 72px 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: center; width: min(530px, 100%); height: 0px">
+
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; font-weight: 600; color: rgb(110, 110, 115)">Scope</span><span style="font-size: 19px; font-weight: 600">Video Production / Graphic Design</span></div>
+
+
+</section>
+
+
+
+<section aria-labelledby="film-h" style="max-width: 1240px; margin: 0 auto; padding: 96px 22px 80px; display: flex; flex-direction: column; gap: 24px">
+<figure data-group="video" style="margin: 0; display: flex; flex-direction: column; gap: 16px; text-align: center">
+<div style="width: {{vshown.w}}; max-width: 100%; margin: 0 auto; aspect-ratio: {{vshown.ratio}}; border-radius: 28px; overflow: hidden; background: #000000; display: flex; align-items: center; justify-content: center; transition: width .4s ease">
+<sc-if value="{{vshown.has}}" hint-placeholder-val="{{ false }}">
+<video ref="{{playerRef}}" src="{{vshown.src}}" controls="{{ true }}" muted="{{sound.muted}}" onVolumeChange="{{syncSound}}" autoPlay="{{ true }}" playsInline="{{ true }}" preload="auto" onLoadedData="{{playVideo}}" aria-label="Bowmore video {{vshown.count}}" style="width: 100%; height: 100%; display: block; object-fit: contain; background: #000000"></video>
+</sc-if>
+<sc-if value="{{vshown.empty}}" hint-placeholder-val="{{ true }}">
+<span style="font-size: 15px; color: rgba(255,255,255,0.72)">[Bowmore  video — tap a thumbnail below to play]</span>
+</sc-if>
+</div>
+<div ref="{{swipeRef}}" data-vreel="1" role="region" aria-label="Scrollable video thumbnails; select one to play it above" tabIndex="0" style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; scroll-padding-inline: 24px; padding: 6px 25% 6px 24px; scrollbar-width: none; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 65%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 65%, transparent 100%)">
+<button class="thumb" type="button" onClick="{{pickVideo}}" aria-label="Play video 1: Bowmore brand film" data-ratio="16 / 9" style="flex: 0 0 auto; width: 240px; aspect-ratio: 16 / 9; padding: 0; border: 0; border-radius: 16px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #000000; display: block"><video src="assets/8afb2eaee84457500261251fddb14049.mp4" poster="assets/3a30fb935d3b2670476475c299d5cb02.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="none" aria-hidden="true" tabIndex="-1" style="width: 100%; height: 100%; display: block; object-fit: cover; background: #000000; pointer-events: none"></video></button>
+<button class="thumb" type="button" onClick="{{pickVideo}}" aria-label="Play video 2: Bowmore film 2" data-ratio="16 / 9" style="flex: 0 0 auto; width: 240px; aspect-ratio: 16 / 9; padding: 0; border: 0; border-radius: 16px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #000000; display: block"><video src="assets/2ad4bd9c435366b43662817e8fdae696.mp4" poster="assets/8f1724b0d66ca18fb6828a9cd1b4e9ec.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="none" aria-hidden="true" tabIndex="-1" style="width: 100%; height: 100%; display: block; object-fit: cover; background: #000000; pointer-events: none"></video></button>
+<button class="thumb" type="button" onClick="{{pickVideo}}" aria-label="Play video 3: Bowmore film 3" data-ratio="16 / 9" style="flex: 0 0 auto; width: 240px; aspect-ratio: 16 / 9; padding: 0; border: 0; border-radius: 16px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #000000; display: block"><video src="assets/72ccdeb8da91a8ef454a61ab0cb838a0.mp4" poster="assets/0c51fa736f433ac2949159be9b11710d.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="none" aria-hidden="true" tabIndex="-1" style="width: 100%; height: 100%; display: block; object-fit: cover; background: #000000; pointer-events: none"></video></button>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px">
+<button type="button" onClick="{{swipePrev}}" aria-label="Scroll videos left" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<figcaption style="min-width: 64px; font-size: 14px; color: #6e6e73; text-align: center">{{vshown.count}}</figcaption>
+<button type="button" onClick="{{swipeNext}}" aria-label="Scroll videos right" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+<div style="display: flex; align-items: center; gap: 8px; margin-left: 16px; padding: 0 16px 0 0; border-radius: 980px; background: #e8e8ed; color: #1d1d1f">
+<button type="button" onClick="{{toggleSound}}" aria-label="{{sound.label}}" aria-pressed="{{sound.pressed}}" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{sound.muted}}" hint-placeholder-val="{{ true }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M16 9l6 6"></path><path d="M22 9l-6 6"></path></svg></sc-if>
+<sc-if value="{{sound.on}}" hint-placeholder-val="{{ false }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg></sc-if>
+</button>
+<input type="range" min="0" max="100" step="1" value="{{sound.pct}}" onChange="{{setVolume}}" aria-label="Volume" style="width: 120px; accent-color: #1d1d1f; cursor: pointer">
+</div>
+</div>
+</figure>
+</section><section aria-labelledby="kv-h" style="max-width: 1240px; margin: 0 auto; padding: 80px 22px; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+<h2 id="kv-h" style="margin: 0; font-size: clamp(36px, 4.5vw, 48px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em">Bowmore Sherry Oak Cask Range</h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; color: #6e6e73">Launch key visual and the Bowmore tasting event</p>
+</div>
+<div role="region" aria-roledescription="carousel" aria-label="Bowmore vertical banner carousel" onMouseEnter="{{bannerPause}}" onMouseLeave="{{bannerResume}}" style="position: relative; width: 100%; aspect-ratio: {{banner.ratio}}; border-radius: 28px; overflow: hidden; background: #f0f0f3">
+<div ref="{{bannerRef}}" style="display: flex; flex-direction: column; width: 100%; height: 100%; transform: {{banner.shift}}; transition: transform .7s cubic-bezier(.2,.7,.2,1)">
+<div style="flex: 0 0 100%; height: 100%; overflow: hidden"><img src="assets/c1596e19fdca6ca06232ab384a04a517.jpg" alt="Bowmore Sherry Oak Cask Range launch key visual" onLoad="{{bannerMeasure}}" style="width: 100%; height: 100%; display: block; object-fit: contain"></div><div style="flex: 0 0 100%; height: 100%; overflow: hidden"><img src="assets/346712b3e8e0c08ae18234f92e1f54ef.jpg" alt="Bowmore tasting event, 4–7 Sep, Bonami French bistro" onLoad="{{bannerMeasure}}" style="width: 100%; height: 100%; display: block; object-fit: contain"></div>
+</div>
+<div role="group" aria-label="Choose banner" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 2px">
+<sc-for list="{{banner.dots}}" as="d" hint-placeholder-count="2">
+<button type="button" onClick="{{d.pick}}" aria-label="Banner {{d.n}}" aria-pressed="{{d.pressed}}" style="width: 28px; height: 28px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span style="display: block; width: 8px; height: {{d.h}}; border-radius: 4px; background: {{d.bg}}; box-shadow: 0 0 0 1px rgba(0,0,0,0.15); transition: height .25s ease"></span></button>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="sherry-h" style="max-width: 1240px; margin: 0 auto; padding: 80px 22px 112px; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+<h2 id="sherry-h" style="margin: 0; font-size: clamp(36px, 4.5vw, 48px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em">Sherry Oak Cask Range</h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; color: #6e6e73">Range overview and 12, 15, 18 &amp; 21 Year Old profiles</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px">
+<figure style="margin: 0; flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 12px">
+<div style="width: 100%; min-height: 320px; border-radius: 28px; overflow: hidden; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{shown0.has}}" hint-placeholder-val="{{ true }}">
+<img src="{{shown0.src}}" alt="{{shown0.alt}}" style="display: block; max-width: 100%; max-height: 760px; width: auto; height: auto; object-fit: contain">
+</sc-if>
+</div>
+<figcaption style="font-size: 14px; color: #6e6e73; text-align: center">{{shown0.count}}</figcaption>
+</figure>
+<div style="flex: 1 1 200px; max-width: 100%; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 12px">
+<button type="button" onClick="{{swipePrev}}" aria-label="Scroll up" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"></path></svg></button>
+<div ref="{{swipeRef}}" data-reel="0" data-dir="y" role="region" aria-label="Scrollable thumbnails; select one to view it in full on the left" tabIndex="0" style="width: 100%; height: 620px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px; overflow-y: auto; overflow-x: hidden; scroll-snap-type: y proximity; scroll-padding-block: 16px; padding: 16px 6px 160px; scrollbar-width: none; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16px, #000 60%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0, #000 16px, #000 60%, transparent 100%)">
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 1 / 1; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/86bdb11b214680a836e80ea3967caeb3.jpg" alt="Bowmore Sherry Oak Cask Range overview — 12, 15, 18, 21 years" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 1 / 1; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/c8dca42e188bf4727678d878e51aae01.jpg" alt="Bowmore 12 Year Sherry Cask" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 1 / 1; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/dedae456b75241a0e59b68b066718f8c.jpg" alt="Bowmore 15 Year Sherry Cask" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 1 / 1; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/0922ad4b5b80e7279f3ec7198d32b49f.jpg" alt="Bowmore 18 Year Sherry Cask" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 1 / 1; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/2a457005bd38ece211cfaef82e28ff8d.jpg" alt="Bowmore 21 Year Sherry Cask" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+</div>
+<button type="button" onClick="{{swipeNext}}" aria-label="Scroll down" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="flavour-h" style="background: linear-gradient(135deg, #3a0d12 0%, #6b1420 55%, #2a0a10 100%); color: #f5f5f7">
+<div style="max-width: 1240px; margin: 0 auto; padding: 112px 22px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.18em; color: #d9b77a">TASTING NOTES</p>
+<h2 id="flavour-h" style="margin: 0; font-size: clamp(36px, 4.5vw, 48px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em">Sherry Cask Tasting Notes</h2>
+<p style="margin: 0; max-width: 620px; font-size: 19px; line-height: 1.5; color: rgba(255,255,255,0.72)">Flavor, nose, palate and finish for the 12, 15, 18 and 21 Year Old — all on one sheet.</p>
+<div role="group" aria-label="Switch tasting-notes language" style="display: flex; gap: 6px; padding: 4px; border-radius: 980px; background: rgba(255,255,255,0.12)">
+<button type="button" onClick="{{flavor.zh}}" aria-pressed="{{flavor.zhOn}}" style="min-height: 40px; padding: 0 20px; border: 0; border-radius: 980px; cursor: pointer; font: inherit; font-size: 15px; font-weight: 500; background: {{flavor.zhBg}}; color: {{flavor.zhFg}}; transition: background .25s ease, color .25s ease">Chinese</button>
+<button type="button" onClick="{{flavor.en}}" aria-pressed="{{flavor.enOn}}" style="min-height: 40px; padding: 0 20px; border: 0; border-radius: 980px; cursor: pointer; font: inherit; font-size: 15px; font-weight: 500; background: {{flavor.enBg}}; color: {{flavor.enFg}}; transition: background .25s ease, color .25s ease">English</button>
+</div>
+<div style="width: 100%; border-radius: 24px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.45)">
+<sc-if value="{{flavor.zhOn}}" hint-placeholder-val="{{ true }}">
+<img src="assets/83ba8891d45a55734177c670b7d0cc64.jpg" alt="Bowmore Sherry Cask tasting notes, 12/15/18/21 years (Chinese)" width="2400" height="1697" style="width: 100%; height: auto; display: block">
+</sc-if>
+<sc-if value="{{flavor.enOn}}" hint-placeholder-val="{{ false }}">
+<img src="assets/7bc4f0b354565f8a213d820a1d353e10.jpg" alt="Bowmore Sherry Cask Range 12, 15, 18, 21 years tasting notes (English)" width="2400" height="1697" style="width: 100%; height: auto; display: block">
+</sc-if>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="classic-h" style="max-width: 1240px; margin: 0 auto; padding: 112px 22px; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+<h2 id="classic-h" style="margin: 0; font-size: clamp(36px, 4.5vw, 48px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em">Core Range</h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; color: #6e6e73">Social content for the 12, 15, 18 and 25 Year Old</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px">
+<figure style="margin: 0; flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 12px">
+<div style="width: 100%; min-height: 320px; border-radius: 28px; overflow: hidden; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{shown1.has}}" hint-placeholder-val="{{ true }}">
+<img src="{{shown1.src}}" alt="{{shown1.alt}}" style="display: block; max-width: 100%; max-height: 760px; width: auto; height: auto; object-fit: contain">
+</sc-if>
+</div>
+<figcaption style="font-size: 14px; color: #6e6e73; text-align: center">{{shown1.count}}</figcaption>
+</figure>
+<div style="flex: 1 1 200px; max-width: 100%; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 12px">
+<button type="button" onClick="{{swipePrev}}" aria-label="Scroll up" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"></path></svg></button>
+<div ref="{{swipeRef}}" data-reel="1" data-dir="y" role="region" aria-label="Scrollable thumbnails; select one to view it in full on the left" tabIndex="0" style="width: 100%; height: 620px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px; overflow-y: auto; overflow-x: hidden; scroll-snap-type: y proximity; scroll-padding-block: 16px; padding: 16px 6px 160px; scrollbar-width: none; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16px, #000 60%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0, #000 16px, #000 60%, transparent 100%)">
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 1 / 1; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/d191b80e9dbaa4497f7105a09a45c9f9.jpg" alt="Bowmore 12 Year Single Malt Scotch Whisky" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 1 / 1; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/ef975ef88677251200557ccfa8b0727e.jpg" alt="Bowmore 15 Year Single Malt Scotch Whisky" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 1 / 1; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/0ecf4af863d9f60e8fbae8c4418b0122.jpg" alt="Bowmore 18 Year Single Malt Scotch Whisky" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 1 / 1; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/bb35f9875b6fb6b18a101d9a288d8ea6.jpg" alt="Bowmore 25 Year Single Malt Scotch Whisky" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+</div>
+<button type="button" onClick="{{swipeNext}}" aria-label="Scroll down" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="arc-h" style="background: radial-gradient(120% 90% at 30% 40%, #3b2a17 0%, #17110b 60%, #0b0806 100%); color: #f5f5f7">
+<div style="max-width: 1240px; margin: 0 auto; padding: 112px 22px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 56px">
+<div style="flex: 1 1 360px; max-width: 520px; min-width: 0; border-radius: 28px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.5)">
+<img src="assets/f09ddcc9f0ea20e702e59ad526a18762.jpg" alt="ARC-54 FROM BOWMORE — half a century of fluid craft" width="584" height="726" style="width: 100%; height: auto; display: block">
+</div>
+<div style="flex: 1 1 360px; max-width: 520px; min-width: 0; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.18em; color: #d9b77a">ARC-54 FROM BOWMORE</p>
+<h2 id="arc-h" style="margin: 0; font-size: clamp(44px, 6vw, 72px); line-height: 1.02; font-weight: 700; letter-spacing: -0.02em">ARC-54</h2>
+
+
+</div>
+</div>
+</section>
+
+<section aria-label="Next Project" style="max-width: 1240px; margin: 0 auto; padding: 112px 22px 96px">
+<a class="next" href="Auchentoshan.dc.html" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
+<span style="font-size: 17px; font-weight: 600; color: #6e6e73">Next Project</span>
+<span style="font-size: clamp(40px, 6vw, 72px); line-height: 1.05; font-weight: 700; letter-spacing: -0.025em">Auchentoshan ›</span>
+<div style="width: 100%; aspect-ratio: 21 / 9; border-radius: 28px; overflow: hidden"></div>
+</a>
+</section>
+
+</main><footer style="border-top: 1px solid rgba(0,0,0,0.1)">
+
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"tone":{"editor":"color","default":"#0f2a3d","options":["#0f2a3d","#1d1d1f","#3d2f1a","#14352c"],"section":"Appearance"},"glassX":{"editor":"range","default":50,"min":5,"max":95,"step":1,"unit":"%","section":"Glass title"},"glassY":{"editor":"range","default":50,"min":5,"max":95,"step":1,"unit":"%","section":"Glass title"},"glassScale":{"editor":"range","default":1,"min":0.5,"max":1.6,"step":0.05,"section":"Glass title"},"glassBlur":{"editor":"range","default":22,"min":0,"max":48,"step":1,"unit":"px","section":"Glass title"},"glassTint":{"editor":"range","default":10,"min":0,"max":40,"step":1,"unit":"%","section":"Glass title"},"$preview":{"width":1440,"height":4400}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { reels: {}, muted: true, volume: 0.8, flavorLang: 'zh' };
+    this.tracks = {};
+    this.setHero = (el) => { this.hero = el; if (el) el.muted = true; };
+    this.playHero = () => { const v = this.hero; if (v) { v.muted = true; const pr = v.play(); if (pr && pr.catch) pr.catch(() => {}); } };
+    this.setSwipe = (el) => {
+      if (!el) return;
+      if (el.hasAttribute('data-vreel')) this.vtrack = el;
+      else if (el.hasAttribute('data-reel')) this.tracks[el.getAttribute('data-reel')] = el;
+    };
+    // Video carousel: thumbnails carry the clip and its shape; the player above shows it whole.
+    this.applySound = () => { const v = this.player; if (v) { v.volume = this.state.volume; v.muted = this.state.muted; } };
+    this.startPlay = (v) => {
+      if (!v) return;
+      this.applySound();
+      const pr = v.play();
+      if (pr && pr.catch) pr.catch(() => { v.muted = true; this.setState({ muted: true }); const p2 = v.play(); if (p2 && p2.catch) p2.catch(() => {}); });
+    };
+    this.setPlayer = (el) => { this.player = el; if (el) { el.volume = this.state.volume; el.muted = this.state.muted; } };
+    this.playVideo = () => this.startPlay(this.player);
+    this.showVideo = (btn) => {
+      const track = btn && btn.closest('[data-vreel]');
+      if (!track) return;
+      const all = Array.from(track.querySelectorAll('button'));
+      all.forEach((b) => b.removeAttribute('data-on'));
+      btn.setAttribute('data-on', '');
+      const v = btn.querySelector('video');
+      const src = v ? (v.getAttribute('src') || '') : '';
+      const ratio = btn.getAttribute('data-ratio') || '16 / 9';
+      this.setState({ video: { src, ratio, n: all.indexOf(btn) + 1, total: all.length } });
+    };
+    this.pickVideo = (e) => this.showVideo(e.currentTarget);
+    this.toggleSound = () => {
+      const muted = !this.state.muted;
+      const volume = !muted && this.state.volume === 0 ? 0.6 : this.state.volume;
+      this.setState({ muted, volume }, () => { this.applySound(); if (this.player && this.player.paused) this.startPlay(this.player); });
+    };
+    this.setVolume = (e) => {
+      const volume = Math.max(0, Math.min(1, Number(e.target.value) / 100));
+      this.setState({ volume, muted: volume === 0 }, this.applySound);
+    };
+    this.syncSound = (e) => {
+      const v = e.currentTarget;
+      if (v.muted !== this.state.muted || Math.abs(v.volume - this.state.volume) > 0.001) {
+        this.setState({ muted: v.muted, volume: v.volume }, this.applySound);
+      }
+    };
+
+    const trackOf = (node) => { const box = node && node.closest('[data-group], section'); return box ? box.querySelector('[data-reel], [data-vreel]') : null; };
+    const move = (e, dir) => {
+      const el = trackOf(e.currentTarget);
+      if (!el) return;
+      if (el.getAttribute('data-dir') === 'y') el.scrollBy({ top: dir * el.clientHeight * 0.8, behavior: 'smooth' });
+      else el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: 'smooth' });
+    };
+    this.swipePrev = (e) => move(e, -1);
+    this.swipeNext = (e) => move(e, 1);
+    this.show = (btn) => {
+      const track = btn && btn.closest('[data-reel]');
+      const img = btn && btn.querySelector('img');
+      if (!track || !img) return;
+      const all = Array.from(track.querySelectorAll('button'));
+      all.forEach((b) => b.removeAttribute('data-on'));
+      btn.setAttribute('data-on', '');
+      const id = track.getAttribute('data-reel');
+      const entry = { src: img.getAttribute('src') || '', alt: img.getAttribute('alt') || '', n: all.indexOf(btn) + 1, total: all.length };
+      this.setState((st) => ({ reels: { ...st.reels, [id]: entry } }));
+    };
+    this.pickThumb = (e) => this.show(e.currentTarget);
+    // Wheel sync: scrolling a thumbnail strip with the mouse wheel moves the strip and updates the big preview.
+    this.wheelSync = (el) => {
+      if (!el || el.__wheelSync) return;
+      el.__wheelSync = true;
+      const vertical = () => el.getAttribute('data-dir') === 'y';
+      let raf = 0;
+      const pick = () => {
+        raf = 0;
+        const btns = Array.from(el.querySelectorAll('button'));
+        if (!btns.length) return;
+        const cs = getComputedStyle(el);
+        const y = vertical();
+        const pad = parseFloat(y ? (cs.scrollPaddingTop || cs.paddingTop) : (cs.scrollPaddingLeft || cs.paddingLeft)) || 0;
+        const box = el.getBoundingClientRect();
+        const focus = (y ? box.top : box.left) + pad;
+        const atEnd = y ? el.scrollTop + el.clientHeight >= el.scrollHeight - 2 : el.scrollLeft + el.clientWidth >= el.scrollWidth - 2;
+        let best = btns[0], dist = Infinity;
+        btns.forEach((b) => { const r = b.getBoundingClientRect(); const d = Math.abs((y ? r.top : r.left) - focus); if (d < dist) { dist = d; best = b; } });
+        if (atEnd && dist > 24) best = btns[btns.length - 1];
+        if (!best.hasAttribute('data-on')) this.show(best);
+      };
+      el.addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(pick); }, { passive: true });
+      el.addEventListener('wheel', (e) => {
+        if (vertical() || Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+        const max = el.scrollWidth - el.clientWidth;
+        if ((e.deltaY > 0 && el.scrollLeft < max - 1) || (e.deltaY < 0 && el.scrollLeft > 1)) { e.preventDefault(); el.scrollLeft += e.deltaY; }
+      }, { passive: false });
+    };
+    const _setSwipe = this.setSwipe;
+    this.setSwipe = (el) => { _setSwipe(el); if (el && el.hasAttribute('data-reel')) this.wheelSync(el); };
+    this.flavorZh = () => this.setState({ flavorLang: 'zh' });
+    this.flavorEn = () => this.setState({ flavorLang: 'en' });
+    this.state.banner = 0;
+    this.state.bannerCount = 0;
+    this.setBanner = (el) => { this.bannerEl = el; };
+    this.slideCount = () => (this.bannerEl ? this.bannerEl.children.length : 0);
+    this.goBanner = (i) => {
+      const n = this.slideCount() || 1;
+      this.setState({ banner: ((i % n) + n) % n, bannerCount: this.slideCount() });
+    };
+    this.syncBanner = () => {
+      const n = this.slideCount();
+      if (n !== this.state.bannerCount) {
+        this.setState({ bannerCount: n, banner: Math.min(this.state.banner || 0, Math.max(n - 1, 0)) });
+        this.bannerMeasure();
+      }
+      const still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (n > 1 && !still && !this.timer) this.timer = setInterval(this.tick, 4000);
+    };
+    this.tick = () => { this.bannerMeasure(); if (!this.paused) this.goBanner(this.state.banner + 1); };
+    this.state.bannerRatio = '2752 / 1807';
+    this.bannerMeasure = () => {
+      const box = this.bannerEl;
+      if (!box) return;
+      let best = 0;
+      box.querySelectorAll('img').forEach((im) => {
+        if (im.naturalWidth && im.naturalHeight) {
+          const r = im.naturalHeight / im.naturalWidth;
+          if (r > best) best = r;
+        }
+      });
+      if (best) {
+        const ratio = '1 / ' + best.toFixed(4);
+        if (ratio !== this.state.bannerRatio) this.setState({ bannerRatio: ratio });
+      }
+    };
+    this.bannerPause = () => { this.paused = true; };
+    this.bannerResume = () => { this.paused = false; };
+  }
+  componentWillUnmount() { if (this.timer) clearInterval(this.timer); if (this.bannerObs) this.bannerObs.disconnect(); }
+  componentDidMount() {
+    Object.keys(this.tracks).forEach((id) => {
+      const first = this.tracks[id].querySelector('button');
+      if (first) this.show(first);
+    });
+    const vfirst = this.vtrack && this.vtrack.querySelector('button');
+    if (vfirst) this.showVideo(vfirst);
+    this.bannerMeasure();
+    this.syncBanner();
+    if (this.bannerEl && window.MutationObserver) {
+      this.bannerObs = new MutationObserver(() => { this.syncBanner(); this.bannerMeasure(); });
+      this.bannerObs.observe(this.bannerEl, { childList: true, subtree: true, attributes: true, attributeFilter: ['src'] });
+    }
+  }
+  componentDidUpdate() { this.syncBanner(); }
+  renderVals() {
+    const view = (id) => {
+      const r = this.state.reels[id] || {};
+      return { has: !!r.src, src: r.src || '', alt: r.alt || '', count: r.total ? r.n + ' / ' + r.total : '' };
+    };
+    const p = this.props;
+    const num = (v, d) => (typeof v === 'number' && isFinite(v) ? v : d);
+    const glass = {
+      x: num(p.glassX, 50) + '%', y: num(p.glassY, 50) + '%', scale: num(p.glassScale, 1),
+      blur: num(p.glassBlur, 22), tint: num(p.glassTint, 10) / 100
+    };
+    const fz = this.state.flavorLang !== 'en';
+    const flavor = {
+      zh: this.flavorZh, en: this.flavorEn,
+      zhOn: fz, enOn: !fz,
+      zhBg: fz ? '#ffffff' : 'transparent', zhFg: fz ? '#3a0d12' : 'rgba(255,255,255,0.8)',
+      enBg: !fz ? '#ffffff' : 'transparent', enFg: !fz ? '#3a0d12' : 'rgba(255,255,255,0.8)'
+    };
+    const bi = this.state.banner || 0;
+    const banner = {
+      shift: 'translateY(-' + (bi * 100) + '%)', ratio: this.state.bannerRatio,
+      dots: Array.from({ length: this.state.bannerCount || 0 }, (_, k) => ({
+        n: k + 1, pressed: k === bi ? 'true' : 'false',
+        h: k === bi ? '22px' : '8px', bg: k === bi ? '#ffffff' : 'rgba(255,255,255,0.55)',
+        pick: () => this.goBanner(k)
+      }))
+    };
+    const vv = this.state.video || {};
+    const tall = (() => { const q = String(vv.ratio || '16 / 9').split('/').map(Number); return q[1] > q[0]; })();
+    const vshown = {
+      has: !!vv.src, empty: !vv.src, src: vv.src || '',
+      count: vv.total ? vv.n + ' / ' + vv.total : '',
+      ratio: vv.ratio || '16 / 9',
+      w: tall ? 'min(100%, 480px)' : '100%'
+    };
+    const muted = this.state.muted;
+    const sound = {
+      muted, on: !muted, pressed: muted ? 'false' : 'true',
+      label: muted ? 'Turn sound on' : 'Turn sound off',
+      pct: Math.round((muted ? 0 : this.state.volume) * 100)
+    };
+    return {
+      flavor, banner, bannerRef: this.setBanner, bannerMeasure: this.bannerMeasure, bannerPause: this.bannerPause, bannerResume: this.bannerResume,
+      vshown, sound, playerRef: this.setPlayer, playVideo: this.playVideo, pickVideo: this.pickVideo,
+      toggleSound: this.toggleSound, setVolume: this.setVolume, syncSound: this.syncSound,
+      glass, heroRef: this.setHero, playHero: this.playHero,
+      shown0: view('0'), shown1: view('1'), shown2: view('2'),
+      pickThumb: this.pickThumb, swipeRef: this.setSwipe, swipePrev: this.swipePrev, swipeNext: this.swipeNext,
+      tone: this.props.tone ?? '#0f2a3d'
+    };
+  }
+}
+</script>
+</body>
+</html>

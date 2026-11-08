@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kakubin — Work</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased}
+main>*{width:100%;box-sizing:border-box}
+html{scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+.next:hover{text-decoration:none}
+.thumb{transition:box-shadow .2s ease}
+.thumb[data-on]{box-shadow:inset 0 0 0 3px #1d1d1f}
+.next .media{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.next:hover .media{transform:scale(1.02)}
+.lg{position:relative;isolation:isolate;overflow:hidden;background:rgba(255,255,255,0.10);-webkit-backdrop-filter:blur(22px) saturate(185%) brightness(1.06);backdrop-filter:blur(22px) saturate(185%) brightness(1.06);border:1px solid rgba(255,255,255,0.32);box-shadow:inset 0 1.5px 0 rgba(255,255,255,0.65),inset 0 -1px 0 rgba(255,255,255,0.18),inset 0 0 32px rgba(255,255,255,0.10),0 24px 64px rgba(0,0,0,0.28)}
+.lg::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:radial-gradient(120% 80% at 20% 0%,rgba(255,255,255,0.38),rgba(255,255,255,0) 55%),radial-gradient(90% 60% at 85% 110%,rgba(255,255,255,0.16),rgba(255,255,255,0) 60%);pointer-events:none}
+.lg-float{animation:lgfloat 9s ease-in-out infinite}
+@keyframes lgfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes rise{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){
+.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
+}
+@media (prefers-reduced-motion: reduce){
+html{scroll-behavior:auto}
+.reveal{animation:none}
+.lg-float{animation:none}
+.next .media{transition:none}
+}
+</style>
+</helmet>
+<div style="overflow-x: clip; background: #fbfbfd; color: #1d1d1f; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang TC', Inter, 'Noto Sans TC', sans-serif; min-height: 100vh">
+
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(251,251,253,0.78); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.1)">
+<nav aria-label="Project navigation" style="max-width: 1080px; margin: 0 auto; padding: 0 22px; min-height: 52px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; flex-direction: row; padding-right: 22px"><a href="./" style="font-size: 13px; color: rgb(110, 110, 115); padding: 14px 0px">‹ All Work</a><span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em">&nbsp; &nbsp; &nbsp; &nbsp; Kakubin</span><a href="Hibiki.dc.html" style="font-size: 13px; color: rgb(110, 110, 115); padding: 14px 0px">Next: Hibiki ›</a></nav>
+</header>
+
+
+
+<main id="top" style="position: static; padding-right: 0px; padding-left: 0px">
+
+<section aria-labelledby="hero-h" style="position: relative; width: 100%; aspect-ratio: 16 / 9; min-height: 560px; max-height: 960px; overflow: hidden; background: #000000; color: #ffffff">
+<video ref="{{heroRef}}" src="assets/b466528a4baa46ebd4e9458bc11e9947.mp4" poster="assets/6f5192cc781d6baaeb142f7dddfaec8d.jpg" muted="{{ true }}" autoPlay="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" onLoadedData="{{playHero}}" aria-hidden="true" tabIndex="-1" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block; object-fit: cover"></video>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(0,0,0,0.16); pointer-events: none"></div>
+<div style="position: absolute; left: {{glass.x}}; top: {{glass.y}}; transform: translate(-50%, -50%) scale({{glass.scale}}); transform-origin: center; pointer-events: none">
+<div class="lg lg-float" style="display: flex; flex-direction: column; align-items: center; gap: 6px; padding: clamp(28px, 4vw, 48px) clamp(40px, 7vw, 96px); border-radius: clamp(32px, 4vw, 56px); text-align: center; width: 188px; justify-content: center; white-space: nowrap; background: rgba(255,255,255,{{glass.tint}}); -webkit-backdrop-filter: blur({{glass.blur}}px) saturate(185%) brightness(1.06); backdrop-filter: blur({{glass.blur}}px) saturate(185%) brightness(1.06); height: 0px">
+<h1 id="hero-h" style="margin: 0; font-size: 71px; line-height: 1; font-weight: 700; letter-spacing: -0.035em; color: #ffffff; text-shadow: 0 2px 28px rgba(0,0,0,0.35); font-family: Arial, sans-serif">Kakubin</h1>
+</div>
+</div>
+</section>
+
+<section aria-label="Project info" style="max-width: 1080px; margin: 0 auto; padding: 72px 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: center">
+
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; font-weight: 600; color: rgb(110, 110, 115)">Scope</span><span style="font-size: 19px; font-weight: 600">Graphic Design<span style="font-family: -apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;PingFang TC&quot;, Inter, &quot;Noto Sans TC&quot;, sans-serif"> / Photography</span><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;PingFang TC&quot;, Inter, &quot;Noto Sans TC&quot;, sans-serif"> / Video Production</span><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;PingFang TC&quot;, Inter, &quot;Noto Sans TC&quot;, sans-serif"> / Merchandise Production</span></span></div>
+
+
+</section>
+
+
+
+<section aria-label="Gallery" style="max-width: 1240px; margin: 0 auto; padding: 0 22px 120px; display: flex; flex-direction: column; gap: 28px; width: 100%; box-sizing: border-box">
+<figure data-group="video" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="width: 100%; aspect-ratio: 16 / 9; border-radius: 28px; overflow: hidden; background: #1d1d1f; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{vshown.has}}" hint-placeholder-val="{{ false }}">
+<video ref="{{playerRef}}" src="{{vshown.src}}" controls="{{ true }}" muted="{{sound.muted}}" onVolumeChange="{{syncSound}}" autoPlay="{{ true }}" playsInline="{{ true }}" preload="auto" onLoadedData="{{playVideo}}" aria-label="Kakubin video {{vshown.count}}" style="width: 100%; height: 100%; display: block; object-fit: contain; background: #000000"></video>
+</sc-if>
+<sc-if value="{{vshown.empty}}" hint-placeholder-val="{{ true }}">
+<span style="font-size: 15px; color: rgba(255,255,255,0.72)">[Kakubin video 16:9 — tap a thumbnail below to play]</span>
+</sc-if>
+</div>
+<div ref="{{swipeRef}}" data-vreel="1" role="region" aria-label="Scrollable video thumbnails; select one to play it above" tabIndex="0" style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; scroll-padding-inline: 24px; padding: 6px 25% 6px 24px; scrollbar-width: none; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 65%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 65%, transparent 100%)">
+<button class="thumb" type="button" onClick="{{pickVideo}}" aria-label="Play video 1" style="flex: 0 0 auto; width: 240px; aspect-ratio: 16 / 9; padding: 0; border: 0; border-radius: 16px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #1d1d1f; display: block"><video src="assets/0f4bb1a444cc17ff68e165919a9e8c00.mp4" poster="assets/65fdf31b3653fe73b76083a9c8082f42.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="none" aria-hidden="true" tabIndex="-1" style="width: 100%; height: 100%; display: block; object-fit: cover; pointer-events: none"></video></button>
+<button class="thumb" type="button" onClick="{{pickVideo}}" aria-label="Play video 2" style="flex: 0 0 auto; width: 240px; aspect-ratio: 16 / 9; padding: 0; border: 0; border-radius: 16px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #1d1d1f; display: block"><video src="assets/ce374eeada5765ccfd993e0867fe6d90.mp4" poster="assets/34447880380dfb96cce15cb140431f8b.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="none" aria-hidden="true" tabIndex="-1" style="width: 100%; height: 100%; display: block; object-fit: cover; pointer-events: none"></video></button>
+<button class="thumb" type="button" onClick="{{pickVideo}}" aria-label="Play video 3" style="flex: 0 0 auto; width: 240px; aspect-ratio: 16 / 9; padding: 0; border: 0; border-radius: 16px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #1d1d1f; display: block"><video src="assets/fd499cf280c81ccbb9ed1042c1c03534.mp4" poster="assets/33f4b80074acbdea4634f38899a91bbe.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="none" aria-hidden="true" tabIndex="-1" style="width: 100%; height: 100%; display: block; object-fit: cover; pointer-events: none"></video></button>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px">
+<button type="button" onClick="{{swipePrev}}" aria-label="Scroll videos left" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<figcaption style="min-width: 64px; font-size: 14px; color: #6e6e73; text-align: center">{{vshown.count}}</figcaption>
+<button type="button" onClick="{{swipeNext}}" aria-label="Scroll videos right" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+<div style="display: flex; align-items: center; gap: 8px; margin-left: 16px; padding: 0 16px 0 0; border-radius: 980px; background: #e8e8ed; color: #1d1d1f">
+<button type="button" onClick="{{toggleSound}}" aria-label="{{sound.label}}" aria-pressed="{{sound.pressed}}" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{sound.muted}}" hint-placeholder-val="{{ true }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M16 9l6 6"></path><path d="M22 9l-6 6"></path></svg></sc-if>
+<sc-if value="{{sound.on}}" hint-placeholder-val="{{ false }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg></sc-if>
+</button>
+<input type="range" min="0" max="100" step="1" value="{{sound.pct}}" onChange="{{setVolume}}" aria-label="Volume" style="width: 120px; accent-color: #1d1d1f; cursor: pointer">
+</div>
+</div>
+</figure>
+<section aria-labelledby="swipe-h" style="max-width: 1240px; margin: 0 auto; padding: 0 22px 120px; display: flex; flex-wrap: wrap; align-items: stretch; gap: 32px">
+<figure style="margin: 0; flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="width: 100%; aspect-ratio: 4 / 5; border-radius: 28px; overflow: hidden">
+<sc-if value="{{shown0.has}}" hint-placeholder-val="{{ true }}">
+<img src="{{shown0.src}}" alt="{{shown0.alt}}" style="width: 100%; height: 100%; display: block; object-fit: contain">
+</sc-if>
+</div>
+<figcaption style="font-size: 14px; color: #6e6e73; text-align: center">{{shown0.count}}</figcaption>
+</figure>
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-left: 24px">
+<h2 id="swipe-h" style="margin: 0; font-size: clamp(36px, 4.5vw, 48px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em">Kakubin Gift with Purchase</h2>
+<div style="display: flex; gap: 12px">
+<button type="button" onClick="{{swipePrev}}" aria-label="Scroll left" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button type="button" onClick="{{swipeNext}}" aria-label="Scroll right" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+</div>
+<div ref="{{swipeRef}}" data-reel="0" role="region" aria-label="Scrollable thumbnails; select one to enlarge it on the left" tabIndex="0" style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; scroll-padding-inline: 24px; padding: 6px 33% 6px 24px; scrollbar-width: none; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 55%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 55%, transparent 100%)">
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/3c7206420b0a98e13dfd14930d57677f.webp" alt="1027_kkb_-" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/2175bedeb85db065187bdd75a17c732e.webp" alt="0709_10x10_60x40_--v2-03" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/607568a156ea749078b45941747f16ef.webp" alt="0413-_-" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/b3b70f4ad6a8cece694f3b2250af1385.webp" alt="kkb_2" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/b1366a933a726ca3c3bd6c35599f6b29.webp" alt="kkb_3" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+</section><section aria-labelledby="swipe-h2" style="max-width: 1240px; margin: 0 auto; padding: 0 22px 120px; display: flex; flex-wrap: wrap; align-items: stretch; gap: 32px">
+<figure style="margin: 0; flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="width: 100%; aspect-ratio: 4 / 5; border-radius: 28px; overflow: hidden">
+<sc-if value="{{shown1.has}}" hint-placeholder-val="{{ true }}">
+<img src="{{shown1.src}}" alt="{{shown1.alt}}" style="width: 100%; height: 100%; display: block; object-fit: contain">
+</sc-if>
+</div>
+<figcaption style="font-size: 14px; color: #6e6e73; text-align: center">{{shown1.count}}</figcaption>
+</figure>
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-left: 24px">
+<h2 id="swipe-h2" style="margin: 0; font-size: clamp(36px, 4.5vw, 48px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em">Kakubin Gift with Purchase</h2>
+<div style="display: flex; gap: 12px">
+<button type="button" onClick="{{swipePrev}}" aria-label="Scroll left" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button type="button" onClick="{{swipeNext}}" aria-label="Scroll right" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+</div>
+<div ref="{{swipeRef}}" data-reel="1" role="region" aria-label="Scrollable thumbnails; select one to enlarge it on the left" tabIndex="0" style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; scroll-padding-inline: 24px; padding: 6px 33% 6px 24px; scrollbar-width: none; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 55%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 55%, transparent 100%)">
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/61b54266dd23deed0c4161f84ffe0b71.webp" alt="1027_kkb_-" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/dd8f4b94449212c3fc433a63e14961fb.webp" alt="0709_10x10_60x40_--v2-03" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/2dfd7f3ed1a7b4e807ad99d1b71056d0.webp" alt="0413-_-" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/3d0abb736b97228c42fb95b2ddaa6d0d.webp" alt="kkb_2" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/59d2efad5debfbe4c2d2aa3f140c380d.webp" alt="kkb_3" style="width: 100%; height: 100%; display: block; object-fit: cover"></button>
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+</section><div style="width: 100%; max-width: 1240px; box-sizing: border-box; margin: 0 auto; padding: 0 22px; border-radius: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px"><div class="reveal" style="flex: 513 1 300px; min-width: 0; border-radius: 28px; display: flex; align-items: center; justify-content: center"><img src="assets/b576b40df5a248b67ebd6cac89dda3bb.webp" alt="kaku_-_aw" style="width: 100%; max-width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 2480 / 3508" width="2480" height="3508"></div><img src="assets/ba6002eb6a68433d0acca1df60a04f72.webp" alt="kaku_-" width="7067" height="5157" style="flex: 727 1 420px; min-width: 0; width: 100%; max-width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 7067 / 5157"></div><div style="box-sizing: border-box; width: 100%; display: flex; justify-content: center; align-items: flex-start; gap: 12px"><figure style="margin: 0; flex: 1.4546 1 0; min-width: 0; display: flex; flex-direction: column; gap: 10px"><img src="assets/9b36af03241a544ac881a5a19c302cfc.webp" alt="0225kakubin_-160x110cm" width="18898" height="12992" style="width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 18898 / 12992"><figcaption style="font-size: 14px; color: #6e6e73; text-align: center">Noren curtain — Wanhua World Afternoon Tavern</figcaption></figure><figure style="margin: 0; flex: 0.6667 1 0; min-width: 0; display: flex; flex-direction: column; gap: 10px"><img src="assets/f03477160a1ec46f48c44afa6e321920.webp" alt="0408-_-1-" width="4725" height="7087" style="width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 4725 / 7087; object-position: 50% 100%"><figcaption style="font-size: 14px; color: #6e6e73; text-align: center">Standing sign — Tokyo Yanhuoqi</figcaption></figure></div><img src="assets/9eaccbcd1503c1f5b65706174f57333e.webp" alt="kakubin_bistro-_" width="16654" height="7205" style="max-width: 100%; height: auto; display: block; object-fit: cover; width: 100%; aspect-ratio: 16654 / 7205"><span style="font-size: 14px; color: #6e6e73; text-align: center">Signboard — Kakubin Bistro Satsuki</span><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 28px">
+
+
+
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 28px">
+
+
+
+</div>
+</section>
+
+<section aria-labelledby="swipe-h3" style="max-width: 1240px; margin: 0 auto; padding: 0 22px 120px; display: flex; flex-wrap: wrap; align-items: stretch; gap: 32px">
+<figure style="margin: 0; flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="width: 100%; aspect-ratio: 4 / 5; border-radius: 28px; overflow: hidden; background: #f0f0f3">
+<sc-if value="{{shown2.has}}" hint-placeholder-val="{{ true }}">
+<img src="{{shown2.src}}" alt="{{shown2.alt}}" style="width: 100%; height: 100%; display: block; object-fit: contain">
+</sc-if>
+</div>
+<figcaption style="font-size: 14px; color: #6e6e73; text-align: center">{{shown2.count}}</figcaption>
+</figure>
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-left: 24px">
+<h2 id="swipe-h3" style="margin: 0; font-size: clamp(36px, 4.5vw, 48px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em">More Work.</h2>
+<div style="display: flex; gap: 12px">
+<button type="button" onClick="{{swipePrev}}" aria-label="Scroll left" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button type="button" onClick="{{swipeNext}}" aria-label="Scroll right" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+</div>
+<div ref="{{swipeRef}}" data-reel="2" role="region" aria-label="Scrollable thumbnails; select one to enlarge it on the left" tabIndex="0" style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; scroll-padding-inline: 24px; padding: 6px 33% 6px 24px; scrollbar-width: none; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 55%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 55%, transparent 100%)">
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/594b109adc5858eb3fb26a17344b406a.webp" alt="1027_kkb_-" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/a61d04b81e67cbfcde8913ad84b2abba.webp" alt="0709_10x10_60x40_--v2-03" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 0%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/8ad6889848c08324d0f54d28680a4ad1.webp" alt="0413-_-" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 39.6336%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/4c50f479175246276706ca1e667cc91e.webp" alt="kkb_2" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 47.4489% 50%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/3cde2eb277eb738367a8672aa25a6396.webp" alt="kkb_3" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/2eea599b350c82895135173e89830080.webp" alt="kkb_1" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/a7db4e8ea9fb0b45f5eca7bb97650f45.jpg" alt="kaku_2" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/e02cc8eeeb75031fb949c2deda00d916.jpg" alt="kaku_2" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/0cca5e4da3e4abef27fc4e6d638e4e36.jpg" alt="kaku_2" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/e614f4072249d8eac746525db9d23a3d.jpg" alt="kaku_2" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/0f3da31c2f452672ae8996e26258e408.jpg" alt="kaku_2" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/7bd9f549b18e7da547852116761396d2.jpg" alt="kaku_2" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Enlarge this piece on the left" style="flex: 0 0 auto; width: 180px; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/24d6b3e958296ec050d78d34fdb01faa.jpg" alt="kaku_2" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%"></button>
+</div>
+<p style="margin: 0; padding-left: 24px; font-size: 14px; color: #6e6e73">Scroll to browse — click a thumbnail to enlarge it on the left.</p>
+</div>
+</section>
+
+<section aria-labelledby="result-h" style="background: #f5f5f7">
+<div style="max-width: 1240px; margin: 0 auto; padding: 120px 22px; display: flex; flex-direction: column; gap: 48px">
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 24px">
+
+
+
+</div>
+</div>
+</section>
+
+<section aria-label="Next Project" style="max-width: 1240px; margin: 0 auto; padding: 120px 22px">
+<a class="next" href="Hibiki.dc.html" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
+
+<span style="font-size: clamp(40px, 6vw, 72px); line-height: 1.05; font-weight: 700; letter-spacing: -0.025em">Hibiki ›</span>
+<span style="font-size: 17px; font-weight: 600; color: #6e6e73; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px">Next Project</span>
+</a>
+</section>
+
+</main><footer style="border-top: 1px solid rgba(0,0,0,0.1)">
+
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;tone&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#fbc600&quot;,&quot;options&quot;:[&quot;#5a3d00&quot;,&quot;#1d1d1f&quot;,&quot;#0f2a3d&quot;,&quot;#14352c&quot;],&quot;section&quot;:&quot;Appearance&quot;},&quot;glassX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:50,&quot;min&quot;:5,&quot;max&quot;:95,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;section&quot;:&quot;Glass title&quot;},&quot;glassY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:50,&quot;min&quot;:5,&quot;max&quot;:95,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;section&quot;:&quot;Glass title&quot;},&quot;glassScale&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.5,&quot;max&quot;:1.6,&quot;step&quot;:0.05,&quot;section&quot;:&quot;Glass title&quot;},&quot;glassBlur&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:22,&quot;min&quot;:0,&quot;max&quot;:48,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;section&quot;:&quot;Glass title&quot;},&quot;glassTint&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:10,&quot;min&quot;:0,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;section&quot;:&quot;Glass title&quot;},&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:4400}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { reels: {}, muted: true, volume: 0.8 };
+    // Sound applies to the video carousel only; the background reel is always silent.
+    this.applySound = () => {
+      const v = this.player;
+      if (v) { v.volume = this.state.volume; v.muted = this.state.muted; }
+      if (this.hero) this.hero.muted = true;
+    };
+    this.startPlay = (v) => {
+      if (!v) return;
+      this.applySound();
+      const pr = v.play();
+      if (pr && pr.catch) pr.catch(() => { v.muted = true; this.setState({ muted: true }); const p2 = v.play(); if (p2 && p2.catch) p2.catch(() => {}); });
+    };
+    this.setHero = (el) => { this.hero = el; if (el) el.muted = true; };
+    // Next-project teaser: always silent, plays on its own.
+    this.setTeaser = (el) => { if (!el) return; el.muted = true; const pr = el.play(); if (pr && pr.catch) pr.catch(() => {}); };
+    this.playHero = () => { const v = this.hero; if (v) { v.muted = true; const pr = v.play(); if (pr && pr.catch) pr.catch(() => {}); } };
+    this.toggleSound = () => {
+      const muted = !this.state.muted;
+      const volume = !muted && this.state.volume === 0 ? 0.6 : this.state.volume;
+      this.setState({ muted, volume }, () => {
+        this.applySound();
+        if (this.player && this.player.paused) this.startPlay(this.player);
+      });
+    };
+    this.setVolume = (e) => {
+      const volume = Math.max(0, Math.min(1, Number(e.target.value) / 100));
+      this.setState({ volume, muted: volume === 0 }, this.applySound);
+    };
+    this.syncSound = (e) => {
+      const v = e.currentTarget;
+      if (v.muted !== this.state.muted || Math.abs(v.volume - this.state.volume) > 0.001) {
+        this.setState({ muted: v.muted, volume: v.volume }, this.applySound);
+      }
+    };
+    this.tracks = {};
+    this.setSwipe = (el) => { if (!el) return; if (el.hasAttribute('data-vreel')) { this.vtrack = el; } else { this.tracks[el.getAttribute('data-reel')] = el; } };
+    const trackOf = (node) => {
+      const box = node && node.closest('[data-group], section');
+      return box ? box.querySelector('[data-reel], [data-vreel]') : null;
+    };
+    const move = (e, dir) => { const el = trackOf(e.currentTarget); if (el) el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: 'smooth' }); };
+    this.swipePrev = (e) => move(e, -1);
+    this.swipeNext = (e) => move(e, 1);
+    this.show = (btn) => {
+      const track = btn && btn.closest('[data-reel]');
+      const img = btn && btn.querySelector('img');
+      if (!track || !img) return;
+      const all = Array.from(track.querySelectorAll('button'));
+      all.forEach((b) => b.removeAttribute('data-on'));
+      btn.setAttribute('data-on', '');
+      const id = track.getAttribute('data-reel');
+      const entry = { src: img.getAttribute('src') || '', alt: img.getAttribute('alt') || '', n: all.indexOf(btn) + 1, total: all.length };
+      this.setState((st) => ({ reels: { ...st.reels, [id]: entry } }));
+    };
+    this.pickThumb = (e) => this.show(e.currentTarget);
+    // Wheel sync: scrolling a thumbnail strip with the mouse wheel moves the strip and updates the big preview.
+    this.wheelSync = (el) => {
+      if (!el || el.__wheelSync) return;
+      el.__wheelSync = true;
+      const vertical = () => el.getAttribute('data-dir') === 'y';
+      let raf = 0;
+      const pick = () => {
+        raf = 0;
+        const btns = Array.from(el.querySelectorAll('button'));
+        if (!btns.length) return;
+        const cs = getComputedStyle(el);
+        const y = vertical();
+        const pad = parseFloat(y ? (cs.scrollPaddingTop || cs.paddingTop) : (cs.scrollPaddingLeft || cs.paddingLeft)) || 0;
+        const box = el.getBoundingClientRect();
+        const focus = (y ? box.top : box.left) + pad;
+        const atEnd = y ? el.scrollTop + el.clientHeight >= el.scrollHeight - 2 : el.scrollLeft + el.clientWidth >= el.scrollWidth - 2;
+        let best = btns[0], dist = Infinity;
+        btns.forEach((b) => { const r = b.getBoundingClientRect(); const d = Math.abs((y ? r.top : r.left) - focus); if (d < dist) { dist = d; best = b; } });
+        if (atEnd && dist > 24) best = btns[btns.length - 1];
+        if (!best.hasAttribute('data-on')) this.show(best);
+      };
+      el.addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(pick); }, { passive: true });
+      el.addEventListener('wheel', (e) => {
+        if (vertical() || Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+        const max = el.scrollWidth - el.clientWidth;
+        if ((e.deltaY > 0 && el.scrollLeft < max - 1) || (e.deltaY < 0 && el.scrollLeft > 1)) { e.preventDefault(); el.scrollLeft += e.deltaY; }
+      }, { passive: false });
+    };
+    const _setSwipe = this.setSwipe;
+    this.setSwipe = (el) => { _setSwipe(el); if (el && el.hasAttribute('data-reel')) this.wheelSync(el); };
+    this.setPlayer = (el) => { this.player = el; if (el) { el.volume = this.state.volume; el.muted = this.state.muted; } };
+    this.playVideo = () => this.startPlay(this.player);
+    this.showVideo = (btn) => {
+      const track = btn && btn.closest('[data-vreel]');
+      if (!track) return;
+      const all = Array.from(track.querySelectorAll('button'));
+      all.forEach((b) => b.removeAttribute('data-on'));
+      btn.setAttribute('data-on', '');
+      const v = btn.querySelector('video');
+      const src = v ? (v.getAttribute('src') || (v.querySelector('source') && v.querySelector('source').getAttribute('src')) || '') : '';
+      this.setState({ video: { src, n: all.indexOf(btn) + 1, total: all.length } });
+    };
+    this.pickVideo = (e) => this.showVideo(e.currentTarget);
+  }
+  componentDidMount() {
+    Object.keys(this.tracks).forEach((id) => {
+      const first = this.tracks[id].querySelector('button');
+      if (first) this.show(first);
+    });
+    const vfirst = this.vtrack && this.vtrack.querySelector('button');
+    if (vfirst) this.showVideo(vfirst);
+  }
+  renderVals() {
+    const view = (id) => {
+      const r = this.state.reels[id] || {};
+      return { has: !!r.src, src: r.src || '', alt: r.alt || '', count: r.total ? r.n + ' / ' + r.total : '' };
+    };
+    const vv = this.state.video || {};
+    const vshown = { has: !!vv.src, empty: !vv.src, src: vv.src || '', count: vv.total ? vv.n + ' / ' + vv.total : '' };
+    const muted = this.state.muted;
+    const sound = {
+      muted, on: !muted, pressed: muted ? 'false' : 'true',
+      label: muted ? 'Turn sound on' : 'Turn sound off',
+      pct: Math.round((muted ? 0 : this.state.volume) * 100)
+    };
+    const p = this.props;
+    const num = (v, d) => (typeof v === 'number' && isFinite(v) ? v : d);
+    const glass = {
+      x: num(p.glassX, 50) + '%',
+      y: num(p.glassY, 50) + '%',
+      scale: num(p.glassScale, 1),
+      blur: num(p.glassBlur, 22),
+      tint: num(p.glassTint, 10) / 100
+    };
+    return {
+      glass, teaserRef: this.setTeaser,
+      sound, heroRef: this.setHero, playHero: this.playHero,
+      toggleSound: this.toggleSound, setVolume: this.setVolume, syncSound: this.syncSound,
+      vshown, playerRef: this.setPlayer, playVideo: this.playVideo, pickVideo: this.pickVideo,
+      shown0: view('0'), shown1: view('1'), shown2: view('2'),
+      pickThumb: this.pickThumb, swipeRef: this.setSwipe, swipePrev: this.swipePrev, swipeNext: this.swipeNext,
+      tone: this.props.tone ?? '#5a3d00'
+    };
+  }
+}
+</script>
+</body>
+</html>

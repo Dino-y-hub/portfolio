@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Portfolio Home</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.card .media{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.card:hover .media{transform:scale(1.025)}
+.pill{transition:background .25s ease,color .25s ease}
+@keyframes rise{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){
+.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
+}
+@media (prefers-reduced-motion: reduce){
+html{scroll-behavior:auto}
+.reveal{animation:none}
+.card .media{transition:none}
+}
+</style>
+</helmet>
+<div style="background: {{t.bg}}; color: {{t.fg}}; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang TC', Inter, 'Noto Sans TC', sans-serif; min-height: 100vh">
+
+<header style="position: static; z-index: 10; background: {{t.nav}}; backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid {{t.line}}">
+<nav aria-label="Main menu" style="max-width: 1080px; margin: 0 auto; padding: 0 22px; min-height: 52px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; flex-direction: column">
+
+<div style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 13px; color: {{t.sub}}; justify-content: center; align-items: center">
+<a href="#work" style="padding: 14px 0">Work</a>
+<a href="#about" style="padding: 14px 0">About</a>
+<a href="#services" style="padding: 14px 0">Services</a>
+<a href="#contact" style="padding: 14px 0">Contact</a>
+</div>
+</nav>
+</header>
+
+<main id="top">
+
+<section style="max-width: 1080px; margin: 0 auto; padding: 120px 22px 64px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 22px">
+<h1 style="margin: 0; font-size: clamp(52px, 9vw, 104px); line-height: 1.04; font-weight: 700; letter-spacing: -0.025em">DINO</h1>
+<p style="margin: 0; max-width: 620px; font-family: arial; font-size: 13px; line-height: 1.45; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(180, 180, 180)">DESIGNER · PHOTOGRAPHER · VIDEO PRODUCER</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px 32px; margin-top: 12px">
+<a class="btn" href="#work" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 24px; border-radius: 980px; background: {{accent}}; color: #ffffff; font-size: 17px; font-weight: 500">View Work</a>
+<a href="#contact" style="font-size: 17px; color: {{link}}; padding: 12px 0">Get in Touch ›</a>
+</div>
+</section>
+
+<section aria-labelledby="featured-h" style="background: {{t.inverse}}; color: {{t.inverseFg}}">
+<div style="max-width: 1080px; margin: 0 auto; padding: 120px 22px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px">
+
+<h2 id="featured-h" style="margin: 0; font-size: clamp(40px, 6vw, 72px); line-height: 1.06; font-weight: 700; letter-spacing: -0.02em">Showreel</h2>
+
+<a href="#work" style="font-size: 19px; color: #2997ff; padding: 10px 0">See All Work ›</a>
+<div style="width: min(1396px, calc(100vw - 44px)); flex-shrink: 0; margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 18px">
+<div style="position: relative; width: 100%; aspect-ratio: 21 / 9; border-radius: 28px; overflow: hidden; background: {{t.inverseTile}}; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{reel.has}}" hint-placeholder-val="{{ false }}">
+<video ref="{{reel.ref}}" src="{{reel.src}}" poster="assets/5566a3c8cc91885e4db941b4c8b99e13.jpg" muted="{{ true }}" autoPlay="{{ true }}" playsInline="{{ true }}" loop="{{reel.loop}}" preload="auto" onEnded="{{reel.next}}" onLoadedData="{{reel.play}}" aria-label="Featured project video {{reel.pos}}" style="width: 100%; height: 100%; object-fit: cover; display: block"></video>
+<canvas ref="{{wipe.ref}}" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none"></canvas>
+<div aria-hidden="true" style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; box-shadow: inset 0 1px 0 rgba(255,255,255,0.55), inset 0 0 0 1px rgba(255,255,255,0.16), inset 0 -1px 0 rgba(255,255,255,0.12), inset 0 24px 60px -30px rgba(255,255,255,0.35)"></div>
+<span aria-hidden="true" style="position: absolute; left: 50%; bottom: 32px; transform: translateX(-50%); padding: 14px 26px; border-radius: 980px; background: linear-gradient(180deg, rgba(255,255,255,0.34), rgba(255,255,255,0.14)); -webkit-backdrop-filter: blur(24px) saturate(180%); backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255,255,255,0.5); box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 8px 32px rgba(0,0,0,0.28); color: #ffffff; font-size: 17px; font-weight: 600; letter-spacing: 0.01em; text-shadow: 0 1px 3px rgba(0,0,0,0.45); white-space: nowrap; pointer-events: none; opacity: {{wipe.hint}}; transition: opacity .6s ease">Move your cursor to wipe the glass</span>
+</sc-if>
+<sc-if value="{{reel.empty}}" hint-placeholder-val="{{ true }}">
+<span style="font-size: 15px; color: {{t.inverseSub}}">[Featured video 21:9 — add video URLs under Tweaks › Featured videos]</span>
+</sc-if>
+<sc-if value="{{reel.multi}}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{reel.prev}}" aria-label="Previous video" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgba(0,0,0,0.45); color: #ffffff; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button type="button" onClick="{{reel.next}}" aria-label="Next video" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgba(0,0,0,0.45); color: #ffffff; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</sc-if>
+</div>
+<sc-if value="{{reel.multi}}" hint-placeholder-val="{{ false }}">
+<div role="group" aria-label="Choose video" style="display: flex; gap: 4px">
+<sc-for list="{{reel.dots}}" as="d" hint-placeholder-count="3">
+<button type="button" onClick="{{d.pick}}" aria-label="Video {{d.n}}" aria-pressed="{{d.pressed}}" style="width: 28px; height: 28px; border: 0; padding: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span style="display: block; width: {{d.w}}; height: 8px; border-radius: 4px; background: {{d.bg}}; transition: width .25s ease"></span></button>
+</sc-for>
+</div>
+</sc-if>
+</div>
+</div>
+</section>
+
+<section id="work" aria-labelledby="work-h" style="max-width: 1240px; margin: 0 auto; padding: 120px 22px 80px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+<h2 id="work-h" style="margin: 0; font-size: clamp(40px, 5vw, 56px); line-height: 1.07; font-weight: 700; letter-spacing: -0.02em">Work.</h2>
+
+</div>
+<div role="group" aria-label="Filter by category" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 4px; border-radius: 980px; background: {{t.tile}}">
+<sc-for list="{{filters}}" as="f" hint-placeholder-count="4">
+<button class="pill" type="button" onClick="{{f.pick}}" aria-pressed="{{f.pressed}}" style="min-height: 40px; padding: 0 18px; border: 0; border-radius: 980px; cursor: pointer; font: inherit; font-size: 15px; font-weight: 500; background: {{f.bg}}; color: {{f.fg}}">{{f.label}}</button>
+</sc-for>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 40px 28px">
+
+<sc-if value="{{show.jp}}" hint-placeholder-val="{{ true }}">
+<a class="card reveal" href="Kakubin.dc.html" style="display: flex; flex-direction: column; gap: 16px; text-decoration: none">
+<div style="aspect-ratio: 4 / 3; border-radius: 24px; overflow: hidden">
+<div class="media" style="width: 100%; height: 100%; box-sizing: border-box; padding: 14% 16%; display: flex; align-items: center; justify-content: center"><img src="assets/e6a4ba7201e8fe1c87d1b57ec412256b.webp" alt="Kakubin logo" width="3508" height="2481" style="display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain"></div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: rgb(110, 110, 115)"><span style="font-size: 22px; letter-spacing: -0.01em; color: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;PingFang TC&quot;, Inter, &quot;Noto Sans TC&quot;, sans-serif">Kakubin</span></span><span style="font-size: 16px; color: rgb(0, 113, 227); margin-top: 4px">View Project ›</span></div>
+</a>
+</sc-if>
+
+<sc-if value="{{show.jp}}" hint-placeholder-val="{{ true }}">
+<a class="card reveal" href="Hibiki.dc.html" style="display: flex; flex-direction: column; gap: 16px; text-decoration: none">
+<div style="aspect-ratio: 4 / 3; border-radius: 24px; overflow: hidden">
+<div class="media" style="width: 100%; height: 100%; box-sizing: border-box; padding: 14% 16%; display: flex; align-items: center; justify-content: center"><img src="assets/5697ada1be3d83ccdfa736cdbb3bac4a.png" alt="Hibiki logo" width="876" height="630" style="display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain"></div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: rgb(110, 110, 115)"><span style="font-size: 22px; letter-spacing: -0.01em; color: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;PingFang TC&quot;, Inter, &quot;Noto Sans TC&quot;, sans-serif">Hibiki</span></span><span style="font-size: 16px; color: rgb(0, 113, 227); margin-top: 4px">View Project ›</span></div>
+</a>
+</sc-if>
+
+<sc-if value="{{show.beer}}" hint-placeholder-val="{{ true }}">
+<a class="card reveal" href="HouseOfSuntory.dc.html" style="display: flex; flex-direction: column; gap: 16px; text-decoration: none">
+<div style="aspect-ratio: 4 / 3; border-radius: 24px; overflow: hidden">
+<div class="media" style="width: 100%; height: 100%; box-sizing: border-box; padding: 14% 16%; display: flex; align-items: center; justify-content: center"><img src="assets/6f35f6bcf7df38c30e7bab1eb86fca42.webp" alt="the-house-of-suntory-logo-png_1_1" width="694" height="175" style="display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain"></div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: rgb(110, 110, 115)"><span style="font-size: 22px; letter-spacing: -0.01em; color: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;PingFang TC&quot;, Inter, &quot;Noto Sans TC&quot;, sans-serif">The PREMIUM MALT'S</span></span><span style="font-size: 16px; color: rgb(0, 113, 227); margin-top: 4px">View Project ›</span></div>
+</a>
+</sc-if>
+
+<sc-if value="{{show.scotch}}" hint-placeholder-val="{{ true }}">
+<a class="card reveal" href="Bowmore.dc.html" style="display: flex; flex-direction: column; gap: 16px; text-decoration: none">
+<div style="aspect-ratio: 4 / 3; border-radius: 24px; overflow: hidden">
+<div class="media" style="width: 100%; height: 100%; box-sizing: border-box; padding: 14% 16%; display: flex; align-items: center; justify-content: center"><img src="assets/e7e0c08c300c2d69c4a7d2d7f63cedca.webp" alt="bowmore_logo_seadragonestislay_cmyk_pos_" width="3000" height="1220" style="display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain"></div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: rgb(110, 110, 115)"><span style="font-size: 22px; letter-spacing: -0.01em; color: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;PingFang TC&quot;, Inter, &quot;Noto Sans TC&quot;, sans-serif">Bowmore</span></span><span style="font-size: 16px; color: rgb(0, 113, 227); margin-top: 4px">View Project ›</span></div>
+</a>
+</sc-if>
+
+<sc-if value="{{show.scotch}}" hint-placeholder-val="{{ true }}">
+<a class="card reveal" href="Auchentoshan.dc.html" style="display: flex; flex-direction: column; gap: 16px; text-decoration: none">
+<div style="aspect-ratio: 4 / 3; border-radius: 24px; overflow: hidden">
+<div class="media" style="width: 100%; height: 100%; box-sizing: border-box; padding: 14% 16%; display: flex; align-items: center; justify-content: center"><img src="assets/0a111effc57a3d32fad5c8842475c7d5.png" alt="new_au_logo" width="2481" height="3508" style="display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain"></div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px"><span style="font-weight: 600; font-size: 13px; color: rgb(110, 110, 115)"><span style="font-size: 22px; letter-spacing: -0.01em; color: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;PingFang TC&quot;, Inter, &quot;Noto Sans TC&quot;, sans-serif">Auchentoshan</span></span><span style="font-size: 16px; line-height: 1.45; color: rgb(110, 110, 115)"><span style="color: rgb(0, 113, 227); font-family: -apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;PingFang TC&quot;, Inter, &quot;Noto Sans TC&quot;, sans-serif">View Project ›</span></span></div>
+</a>
+</sc-if>
+
+<sc-if value="{{show.bourbon}}" hint-placeholder-val="{{ true }}">
+<a class="card reveal" href="JimBeam.dc.html" style="display: flex; flex-direction: column; gap: 16px; text-decoration: none">
+<div style="aspect-ratio: 4 / 3; border-radius: 24px; overflow: hidden">
+<div class="media" style="width: 100%; height: 100%; box-sizing: border-box; padding: 14% 16%; display: flex; align-items: center; justify-content: center"><img src="assets/30711cccc2b8fef988646c248017463b.png" alt="jimbeam_logo_primary_cmyk_2025" width="2078" height="1663" style="display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain"></div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: rgb(110, 110, 115)"><span style="font-size: 22px; letter-spacing: -0.01em; color: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;PingFang TC&quot;, Inter, &quot;Noto Sans TC&quot;, sans-serif">Jim Beam</span></span><span style="font-size: 16px; line-height: 1.45; color: rgb(110, 110, 115)"><span style="color: rgb(0, 113, 227); font-family: -apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;PingFang TC&quot;, Inter, &quot;Noto Sans TC&quot;, sans-serif">View Project ›</span></span></div>
+</a>
+</sc-if>
+
+</div>
+</section>
+
+<section id="about" aria-labelledby="about-h" style="max-width: 1080px; margin: 0 auto; padding: 80px 22px 120px; display: flex; flex-wrap: wrap; justify-content: center; gap: 56px; align-items: flex-start; text-align: center">
+<div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<h2 id="about-h" style="margin: 0; font-size: clamp(40px, 5vw, 56px); line-height: 1.07; font-weight: 700; letter-spacing: -0.02em">About Me.</h2>
+<p style="margin: 0; font-size: 21px; line-height: 1.5; color: {{t.fg}}">I design for brands people raise a glass to — and the ones they will.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: {{t.sub}}">From spirits to lifestyle, retail to startups, I help brands of every kind find their look — through design, photography and video, crafted with care and kept consistent everywhere they show up.</p>
+
+</div>
+</section>
+
+<section id="services" aria-labelledby="services-h" style="background: {{t.band}}">
+<div style="max-width: 1240px; margin: 0 auto; padding: 120px 22px; display: flex; flex-direction: column; gap: 48px">
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px">
+<div class="reveal" style="background: {{t.card}}; border-radius: 28px; padding: 40px 36px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="{{link}}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"></rect><circle cx="9" cy="10" r="2"></circle><path d="M21 16l-5-5-9 9"></path></svg>
+<h3 style="margin: 8px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.01em">Campaign &amp; Key Visual</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: {{t.sub}}">From a single key visual to every format it needs — social, print, digital banners and in-store screens — kept consistent across every touchpoint.</p>
+</div>
+<div class="reveal" style="background: {{t.card}}; border-radius: 28px; padding: 40px 36px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="{{link}}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"></path><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"></path><path d="M5 12v8h14v-8"></path><path d="M10 20v-5h4v5"></path></svg>
+<h3 style="margin: 8px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.01em">Retail &amp; On-Trade Design</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: {{t.sub}}">Menus, table cards, posters, packaging and large-format displays that turn a brand into something people see, touch and order.</p>
+</div>
+<div class="reveal" style="background: {{t.card}}; border-radius: 28px; padding: 40px 36px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="{{link}}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
+<h3 style="margin: 8px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.01em">Photography &amp; Video Production</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: {{t.sub}}">Event coverage, product films and social motion content — shot and edited in-house, ready for every channel.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" aria-labelledby="contact-h" style="max-width: 1080px; margin: 0 auto; padding: 140px 22px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px">
+<h2 id="contact-h" style="margin: 0; font-size: clamp(40px, 5vw, 56px); line-height: 1.07; font-weight: 700; letter-spacing: -0.02em">Let's Work Together.</h2>
+<p style="margin: 0; max-width: 520px; font-size: 18px; line-height: 1.45; color: {{t.sub}}">Open to freelance projects in design, photography and video — big brands, small brands, and everything in between.</p>
+<a class="btn" href="mailto:ddino.odo@gmail.com" style="margin-top: 12px; display: inline-flex; align-items: center; min-height: 52px; padding: 0 32px; border-radius: 980px; background: {{accent}}; color: #ffffff; font-size: 19px; font-weight: 500">ddino.odo@gmail.com</a>
+</section>
+
+</main>
+
+<footer style="border-top: 1px solid {{t.line}}">
+<div style="max-width: 1080px; margin: 0 auto; padding: 24px 22px 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; font-size: 12px; color: {{t.sub}}">
+<span>© 2026 Dino Yang. All rights reserved.</span>
+<a href="#top">Back to Top ↑</a>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false,"section":"Appearance"},"accent":{"editor":"color","default":"#0071e3","options":["#0071e3","#1d1d1f","#bf4800","#008009"],"section":"Appearance"},"videos":{"editor":"text","default":"assets/f7db54bcbedd5d13bd9da3ea493254ad.mp4","section":"Featured videos"},"$preview":{"width":1440,"height":4300}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { picked: 'all', clip: 0, wiped: false };
+    this.setVideo = (el) => { this.video = el; if (el) { el.muted = true; } };
+    this.playVideo = () => { const v = this.video; if (v) { v.muted = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); } };
+    // Wipe-the-glass: a frosted layer over the showreel; the cursor wipes it clear and it slowly fogs back.
+    this.setWipe = (cv) => {
+      if (this.wipeStop) { this.wipeStop(); this.wipeStop = null; }
+      if (!cv || !cv.parentElement) return;
+      const host = cv.parentElement;
+      const ctx = cv.getContext('2d');
+      const mask = document.createElement('canvas'); const mctx = mask.getContext('2d');
+      const tiny = document.createElement('canvas'); const tctx = tiny.getContext('2d');
+      let W = 0, H = 0, raf = 0, last = null, visible = true, tickN = 0, lens = { x: 0, y: 0, a: 0, t: 0 }, travel = 0;
+      const size = () => {
+        const w = Math.max(2, Math.round(host.clientWidth * 0.5)), h = Math.max(2, Math.round(host.clientHeight * 0.5));
+        if (w === W && h === H) return;
+        W = w; H = h; cv.width = mask.width = w; cv.height = mask.height = h;
+        tiny.width = 64; tiny.height = Math.max(2, Math.round(64 * h / w));
+      };
+      const brush = (x, y) => {
+        const r = W * 0.075;
+        const g = mctx.createRadialGradient(x, y, 0, x, y, r);
+        g.addColorStop(0, 'rgba(0,0,0,1)'); g.addColorStop(0.55, 'rgba(0,0,0,0.85)'); g.addColorStop(1, 'rgba(0,0,0,0)');
+        mctx.fillStyle = g; mctx.beginPath(); mctx.arc(x, y, r, 0, Math.PI * 2); mctx.fill();
+      };
+      const onMove = (e) => {
+        const b = host.getBoundingClientRect();
+        if (!b.width || !b.height) return;
+        const x = (e.clientX - b.left) * W / b.width, y = (e.clientY - b.top) * H / b.height;
+        mctx.globalCompositeOperation = 'source-over';
+        if (last) {
+          const dx = x - last.x, dy = y - last.y, n = Math.max(1, Math.ceil(Math.hypot(dx, dy) / Math.max(1, W * 0.02)));
+          for (let i = 1; i <= n; i++) brush(last.x + dx * i / n, last.y + dy * i / n);
+          travel += Math.hypot(dx, dy);
+        } else brush(x, y);
+        last = { x, y };
+        lens.x = x; lens.y = y; lens.t = performance.now();
+        if (!this.state.wiped && travel > W * 1.2) this.setState({ wiped: true });
+      };
+      const onLeave = () => { last = null; };
+      const frame = () => {
+        raf = requestAnimationFrame(frame);
+        if (!visible) return;
+        size();
+        if (++tickN % 10 === 0) { mctx.globalCompositeOperation = 'destination-out'; mctx.fillStyle = 'rgba(0,0,0,0.06)'; mctx.fillRect(0, 0, W, H); }
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.clearRect(0, 0, W, H);
+        ctx.fillStyle = 'rgba(8,8,12,0.18)'; ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = 'rgba(255,255,255,0.2)'; ctx.fillRect(0, 0, W, H);
+        const sheen = ctx.createLinearGradient(0, 0, W, H);
+        sheen.addColorStop(0, 'rgba(255,255,255,0.26)'); sheen.addColorStop(0.35, 'rgba(255,255,255,0.04)');
+        sheen.addColorStop(0.62, 'rgba(255,255,255,0)'); sheen.addColorStop(1, 'rgba(255,255,255,0.12)');
+        ctx.fillStyle = sheen; ctx.fillRect(0, 0, W, H);
+        ctx.globalCompositeOperation = 'destination-out'; ctx.drawImage(mask, 0, 0);
+        ctx.globalCompositeOperation = 'source-over';
+        // Liquid lens under the cursor: bright refractive rim + specular glint.
+        const idle = performance.now() - lens.t;
+        if (this.state.wiped && idle > 4000) { travel = 0; this.setState({ wiped: false }); }
+        const target = idle < 160 ? 1 : 0;
+        lens.a += (target - lens.a) * 0.12;
+        if (lens.a > 0.02) {
+          const r = W * 0.075, a = lens.a;
+          const rim = ctx.createRadialGradient(lens.x, lens.y, r * 0.6, lens.x, lens.y, r);
+          rim.addColorStop(0, 'rgba(255,255,255,0)'); rim.addColorStop(0.72, 'rgba(255,255,255,' + (0.05 * a) + ')');
+          rim.addColorStop(0.9, 'rgba(255,255,255,' + (0.42 * a) + ')'); rim.addColorStop(1, 'rgba(255,255,255,0)');
+          ctx.fillStyle = rim; ctx.beginPath(); ctx.arc(lens.x, lens.y, r, 0, Math.PI * 2); ctx.fill();
+          const gx = lens.x - r * 0.38, gy = lens.y - r * 0.42, gr = r * 0.22;
+          const glint = ctx.createRadialGradient(gx, gy, 0, gx, gy, gr);
+          glint.addColorStop(0, 'rgba(255,255,255,' + (0.55 * a) + ')'); glint.addColorStop(1, 'rgba(255,255,255,0)');
+          ctx.fillStyle = glint; ctx.beginPath(); ctx.arc(gx, gy, gr, 0, Math.PI * 2); ctx.fill();
+        }
+      };
+      const io = typeof IntersectionObserver !== 'undefined' ? new IntersectionObserver((es) => { visible = es.some((x) => x.isIntersecting); }) : null;
+      if (io) io.observe(host);
+      host.addEventListener('pointermove', onMove);
+      host.addEventListener('pointerdown', onMove);
+      host.addEventListener('pointerleave', onLeave);
+      raf = requestAnimationFrame(frame);
+      this.wipeStop = () => {
+        cancelAnimationFrame(raf); if (io) io.disconnect();
+        host.removeEventListener('pointermove', onMove); host.removeEventListener('pointerdown', onMove); host.removeEventListener('pointerleave', onLeave);
+      };
+    };
+  }
+  videoList() {
+    const list = String(this.props.videos ?? '').split(/[\s,，]+/).map((s) => s.trim()).filter(Boolean);
+return list.length ? list : ['assets/f7db54bcbedd5d13bd9da3ea493254ad.mp4'];
+  }
+  renderVals() {
+    const dark = this.props.dark ?? false;
+    const accent = this.props.accent ?? '#0071e3';
+    const t = dark ? {
+      bg: '#000000', fg: '#f5f5f7', sub: '#a1a1a6', faint: '#6e6e73',
+      tile: '#1c1c1e', line: 'rgba(255,255,255,0.14)', nav: 'rgba(22,22,23,0.78)',
+      band: '#0b0b0c', card: '#1c1c1e',
+      inverse: '#f5f5f7', inverseFg: '#1d1d1f', inverseSub: '#5e5e63', inverseTile: '#e3e3e8'
+    } : {
+      bg: '#fbfbfd', fg: '#1d1d1f', sub: '#6e6e73', faint: '#a1a1a6',
+      tile: '#f0f0f3', line: 'rgba(0,0,0,0.1)', nav: 'rgba(251,251,253,0.78)',
+      band: '#f5f5f7', card: '#ffffff',
+      inverse: '#000000', inverseFg: '#f5f5f7', inverseSub: '#a1a1a6', inverseTile: '#1c1c1e'
+    };
+    const tones = dark
+      ? { a: '#2e2410', b: '#2a2318', c: '#222224', d: '#162430', e: '#16261f', f: '#2c1a1a' }
+      : { a: '#f4ead2', b: '#efe6d8', c: '#ececef', d: '#e1e9f2', e: '#e2eee8', f: '#f3e1df' };
+    const picked = this.state.picked;
+    const list = [
+      { id: 'all', label: 'All' },
+      { id: 'jp', label: 'Japanese Whisky' },
+      { id: 'beer', label: 'Beer' },
+      { id: 'scotch', label: 'Scotch Whisky' },
+      { id: 'bourbon', label: 'Bourbon Whiskey' }
+    ];
+    const filters = list.map((f) => ({
+      ...f,
+      pressed: picked === f.id ? 'true' : 'false',
+      bg: picked === f.id ? t.fg : 'transparent',
+      fg: picked === f.id ? t.bg : t.sub,
+      pick: () => this.setState({ picked: f.id })
+    }));
+    const on = (id) => picked === 'all' || picked === id;
+    const vids = this.videoList();
+    const count = vids.length;
+    const clip = count ? ((this.state.clip % count) + count) % count : 0;
+    const go = (i) => this.setState({ clip: count ? ((i % count) + count) % count : 0 });
+    const reel = {
+      has: count > 0, empty: count === 0, multi: count > 1, loop: count === 1,
+      src: vids[clip] || '', pos: count ? (clip + 1) + ' / ' + count : '',
+      ref: this.setVideo, play: this.playVideo,
+      next: () => go(clip + 1), prev: () => go(clip - 1),
+      dots: vids.map((v, i) => ({
+        n: i + 1, pressed: i === clip ? 'true' : 'false',
+        w: i === clip ? '24px' : '8px',
+        bg: i === clip ? t.inverseFg : t.inverseSub,
+        pick: () => go(i)
+      }))
+    };
+    return {
+      t, tones, accent, filters, reel,
+      wipe: { ref: this.setWipe, hint: this.state.wiped ? '0' : '1' },
+      link: dark ? '#2997ff' : accent,
+      show: { jp: on('jp'), beer: on('beer'), scotch: on('scotch'), bourbon: on('bourbon') }
+    };
+  }
+}
+</script>
+</body>
+</html>

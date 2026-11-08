@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Jim Beam — Work</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased}
+main>*{width:100%;box-sizing:border-box}
+html{scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+.next:hover{text-decoration:none}
+.lg{position:relative;isolation:isolate;overflow:hidden;background:rgba(255,255,255,0.10);-webkit-backdrop-filter:blur(22px) saturate(185%) brightness(1.06);backdrop-filter:blur(22px) saturate(185%) brightness(1.06);border:1px solid rgba(255,255,255,0.32);box-shadow:inset 0 1.5px 0 rgba(255,255,255,0.65),inset 0 -1px 0 rgba(255,255,255,0.18),inset 0 0 32px rgba(255,255,255,0.10),0 24px 64px rgba(0,0,0,0.28)}
+.lg::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:radial-gradient(120% 80% at 20% 0%,rgba(255,255,255,0.38),rgba(255,255,255,0) 55%),radial-gradient(90% 60% at 85% 110%,rgba(255,255,255,0.16),rgba(255,255,255,0) 60%);pointer-events:none}
+.lg-float{animation:lgfloat 9s ease-in-out infinite}
+@keyframes lgfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.thumb{transition:box-shadow .2s ease}
+.thumb[data-on]{box-shadow:inset 0 0 0 3px #1d1d1f}
+.next .media{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.next:hover .media{transform:scale(1.02)}
+@keyframes rise{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){
+.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
+}
+@media (prefers-reduced-motion: reduce){
+html{scroll-behavior:auto}
+.reveal{animation:none}
+.lg-float{animation:none}
+.next .media{transition:none}
+}
+</style>
+</helmet>
+<div style="background: #fbfbfd; color: #1d1d1f; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang TC', Inter, 'Noto Sans TC', sans-serif; min-height: 100vh">
+
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(251,251,253,0.78); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.1)">
+<nav aria-label="Project navigation" style="max-width: 1080px; margin: 0 auto; padding: 0 22px; min-height: 52px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px"><a href="./" style="font-size: 13px; color: rgb(110, 110, 115); padding: 14px 0px">‹ All Work</a><span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Jim Beam</span><a href="Kakubin.dc.html" style="font-size: 13px; color: rgb(110, 110, 115); padding: 14px 0px">Next: Kakubin ›</a></nav>
+</header>
+
+
+
+<main id="top" style="display: grid; position: static; grid-template-columns: repeat(1, minmax(0, 1fr))">
+
+<section aria-labelledby="hero-h" style="position: relative; width: 100%; aspect-ratio: 16 / 9; min-height: 560px; max-height: 960px; overflow: hidden; background: #000000; color: #ffffff">
+<video ref="{{heroRef}}" src="assets/5465337e113f5fbca31b3677f3a267ba.mp4" poster="assets/950bab62390d386f5123e740a991fcd3.jpg" muted="{{ true }}" autoPlay="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" onLoadedData="{{playHero}}" aria-hidden="true" tabIndex="-1" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block; object-fit: cover"></video>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(0,0,0,0.16); pointer-events: none"></div>
+<div style="position: absolute; left: {{glass.x}}; top: {{glass.y}}; transform: translate(-50%, -50%) scale({{glass.scale}}); transform-origin: center; pointer-events: none">
+<div class="lg lg-float" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: clamp(24px, 3.5vw, 44px) clamp(32px, 6vw, 80px); border-radius: clamp(32px, 4vw, 56px); text-align: center; white-space: nowrap; background: rgba(255,255,255,{{glass.tint}}); -webkit-backdrop-filter: blur({{glass.blur}}px) saturate(185%) brightness(1.06); backdrop-filter: blur({{glass.blur}}px) saturate(185%) brightness(1.06); width: 381px; height: 44px">
+<h1 id="hero-h" style="margin: 0; font-size: clamp(36px, 5.5vw, 80px); line-height: 1; font-weight: 700; letter-spacing: -0.03em; color: #ffffff; text-shadow: 0 2px 28px rgba(0,0,0,0.35)">Jim Beam</h1>
+</div>
+</div>
+</section>
+
+<section aria-label="Project info" style="max-width: 1080px; margin: 0 auto; padding: 72px 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: center; width: min(530px, 100%); height: 0px">
+
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; font-weight: 600; color: rgb(110, 110, 115)">Scope</span><span style="font-size: 19px; font-weight: 600">Video Production / Graphic Design</span></div>
+
+
+</section>
+
+
+
+<section aria-labelledby="film-h" style="max-width: 1240px; margin: 0 auto; padding: 96px 22px 80px; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+
+
+
+</div>
+<figure data-group="video" style="margin: 0; display: flex; flex-direction: column; gap: 16px; text-align: center">
+<div style="width: {{vshown.w}}; max-width: 100%; margin: 0 auto; aspect-ratio: {{vshown.ratio}}; border-radius: 28px; overflow: hidden; background: #000000; display: flex; align-items: center; justify-content: center; transition: width .4s ease">
+<sc-if value="{{vshown.has}}" hint-placeholder-val="{{ false }}">
+<video ref="{{playerRef}}" src="{{vshown.src}}" controls="{{ true }}" muted="{{sound.muted}}" onVolumeChange="{{syncSound}}" autoPlay="{{ true }}" playsInline="{{ true }}" preload="auto" onLoadedData="{{playVideo}}" aria-label="Jim Beam video {{vshown.count}}" style="width: 100%; height: 100%; display: block; object-fit: contain; background: #000000"></video>
+</sc-if>
+<sc-if value="{{vshown.empty}}" hint-placeholder-val="{{ true }}">
+<span style="font-size: 15px; color: rgba(255,255,255,0.72)">[Jim Beam  video — tap a thumbnail below to play]</span>
+</sc-if>
+</div>
+<div ref="{{swipeRef}}" data-vreel="1" role="region" aria-label="Scrollable video thumbnails; select one to play it above" tabIndex="0" style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; scroll-padding-inline: 24px; padding: 6px 25% 6px 24px; scrollbar-width: none; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 65%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 65%, transparent 100%)">
+<button class="thumb" type="button" onClick="{{pickVideo}}" aria-label="Play video 1: Jim Beam Highball how-to" data-ratio="16 / 9" style="flex: 0 0 auto; width: 240px; aspect-ratio: 16 / 9; padding: 0; border: 0; border-radius: 16px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #000000; display: block"><video src="assets/5465337e113f5fbca31b3677f3a267ba.mp4" poster="assets/950bab62390d386f5123e740a991fcd3.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="none" aria-hidden="true" tabIndex="-1" style="width: 100%; height: 100%; display: block; object-fit: cover; background: #000000; pointer-events: none"></video></button>
+<button class="thumb" type="button" onClick="{{pickVideo}}" aria-label="Play video 2: Make It a Highball motion A4 · 1" data-ratio="1792 / 1280" style="flex: 0 0 auto; width: 240px; aspect-ratio: 16 / 9; padding: 0; border: 0; border-radius: 16px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #000000; display: block"><video src="assets/815428b1014b15b6fcfd6ca0ae49f83e.mp4" poster="assets/2d7cee68c85cd8672b8699907f2bbc1e.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="none" aria-hidden="true" tabIndex="-1" style="width: 100%; height: 100%; display: block; object-fit: cover; background: #000000; pointer-events: none"></video></button>
+<button class="thumb" type="button" onClick="{{pickVideo}}" aria-label="Play video 3: Make It a Highball motion A4 · 2" data-ratio="1792 / 1280" style="flex: 0 0 auto; width: 240px; aspect-ratio: 16 / 9; padding: 0; border: 0; border-radius: 16px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #000000; display: block"><video src="assets/12756e78d0571855006ee0e7f6a07fad.mp4" poster="assets/0dbb00f4049236be2789f8dfe21330a4.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="none" aria-hidden="true" tabIndex="-1" style="width: 100%; height: 100%; display: block; object-fit: cover; background: #000000; pointer-events: none"></video></button>
+<button class="thumb" type="button" onClick="{{pickVideo}}" aria-label="Play video 4: Make It a Highball motion A4 · 3" data-ratio="1792 / 1280" style="flex: 0 0 auto; width: 240px; aspect-ratio: 16 / 9; padding: 0; border: 0; border-radius: 16px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #000000; display: block"><video src="assets/54544e822e34ac640f5852d22ec33545.mp4" poster="assets/18061ca86e7e37feb93bd1e70a0746f7.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="none" aria-hidden="true" tabIndex="-1" style="width: 100%; height: 100%; display: block; object-fit: cover; background: #000000; pointer-events: none"></video></button>
+<button class="thumb" type="button" onClick="{{pickVideo}}" aria-label="Play video 5: Make It a Highball motion A4 · 4" data-ratio="1792 / 1280" style="flex: 0 0 auto; width: 240px; aspect-ratio: 16 / 9; padding: 0; border: 0; border-radius: 16px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #000000; display: block"><video src="assets/1c3dba9767a5753e7b6859b28d9bdeb2.mp4" poster="assets/f987687537f7be7edfbf6914905e6cee.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="none" aria-hidden="true" tabIndex="-1" style="width: 100%; height: 100%; display: block; object-fit: cover; background: #000000; pointer-events: none"></video></button>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px">
+<button type="button" onClick="{{swipePrev}}" aria-label="Scroll videos left" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<figcaption style="min-width: 64px; font-size: 14px; color: #6e6e73; text-align: center">{{vshown.count}}</figcaption>
+<button type="button" onClick="{{swipeNext}}" aria-label="Scroll videos right" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+<div style="display: flex; align-items: center; gap: 8px; margin-left: 16px; padding: 0 16px 0 0; border-radius: 980px; background: #e8e8ed; color: #1d1d1f">
+<button type="button" onClick="{{toggleSound}}" aria-label="{{sound.label}}" aria-pressed="{{sound.pressed}}" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{sound.muted}}" hint-placeholder-val="{{ true }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M16 9l6 6"></path><path d="M22 9l-6 6"></path></svg></sc-if>
+<sc-if value="{{sound.on}}" hint-placeholder-val="{{ false }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg></sc-if>
+</button>
+<input type="range" min="0" max="100" step="1" value="{{sound.pct}}" onChange="{{setVolume}}" aria-label="Volume" style="width: 120px; accent-color: #1d1d1f; cursor: pointer">
+</div>
+</div>
+</figure>
+</section><section aria-labelledby="f1-h" style="background: radial-gradient(120% 90% at 30% 30%, #2a2a2a 0%, #111111 60%, #050505 100%); color: #f5f5f7">
+<div style="max-width: 1240px; margin: 0 auto; padding: 112px 22px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.18em; color: #f2c94c">CADILLAC FORMULA 1 TEAM · OFFICIAL SPIRITS PARTNER</p>
+<h2 id="f1-h" style="margin: 0; font-size: clamp(36px, 4.5vw, 48px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em">Jim Beam Highball, a Race-Day Essential</h2>
+<p style="margin: 0; max-width: 680px; font-size: 19px; line-height: 1.5; color: rgba(255,255,255,0.72)">Race Day, Served Ice Cold — the F1 partnership key visual in landscape A2 and portrait formats.</p>
+</div>
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 24px; width: 100%">
+<figure style="margin: 0; flex: 1.4159 1 0; min-width: 0; aspect-ratio: 2400 / 1695; border-radius: 24px; overflow: hidden; background: #1a1a1a; box-shadow: 0 24px 60px rgba(0,0,0,0.35)"><img src="assets/1cb4bdfe81c466c8d75a6507b4eaa0d6.jpg" alt="F1 Cadillac partnership key visual: Jim Beam Highball, a race-day essential (landscape A2)" width="2400" height="1695" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+<figure style="margin: 0; flex: 0.7071 1 0; min-width: 0; aspect-ratio: 1697 / 2400; border-radius: 24px; overflow: hidden; background: #1a1a1a; box-shadow: 0 24px 60px rgba(0,0,0,0.35)"><img src="assets/8c2ac5509f9b6d8a72592959821fe55a.jpg" alt="F1 Cadillac partnership key visual: Jim Beam Highball, a race-day essential (portrait)" width="1697" height="2400" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="pwj-h" style="background: #ffd23f; color: #1d1d1f">
+<div style="max-width: 1240px; margin: 0 auto; padding: 112px 22px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.18em; color: #b00e28">START THE PARTY · JUST CRACK A CAN</p>
+
+<p style="margin: 0; max-width: 680px; font-size: 19px; line-height: 1.5; color: #3a3a3c">Ambassador campaign roll-out: a portrait poster, an in-store display at Breeze Center and a retail shelf card.</p>
+</div>
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 24px; width: 100%">
+<figure style="margin: 0; flex: 0.7071 1 0; min-width: 0; aspect-ratio: 1697 / 2400; border-radius: 24px; overflow: hidden; background: #ffe27a; box-shadow: 0 20px 50px rgba(120,80,0,0.25)"><img src="assets/f1c9de5c5b2650a49b521f8fb44b1014.jpg" alt="Pai Wei-chun ambassador portrait poster" width="1697" height="2400" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+<figure style="margin: 0; flex: 1.0526 1 0; min-width: 0; aspect-ratio: 2400 / 2280; border-radius: 24px; overflow: hidden; background: #ffe27a; box-shadow: 0 20px 50px rgba(120,80,0,0.25)"><img src="assets/0d89e7f680702a326b04c552a5f9b240.jpg" alt="Breeze Center in-store display: Start the party, just crack a can" width="2400" height="2280" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+<figure style="margin: 0; flex: 1.0000 1 0; min-width: 0; aspect-ratio: 1182 / 1182; border-radius: 24px; overflow: hidden; background: #ffe27a; box-shadow: 0 20px 50px rgba(120,80,0,0.25)"><img src="assets/de1c3121d9fcd68f67ca70e9814e6967.jpg" alt="RTD channel shelf card (die-cut)" width="1182" height="1182" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+</div>
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 24px; width: 100%">
+<p style="margin: 0; flex: 1 1 0; font-size: 13px; letter-spacing: 0.06em; text-align: center; color: #3a3a3c">Portrait poster</p>
+<p style="margin: 0; flex: 1 1 0; font-size: 13px; letter-spacing: 0.06em; text-align: center; color: #3a3a3c">Breeze Center display</p>
+<p style="margin: 0; flex: 1 1 0; font-size: 13px; letter-spacing: 0.06em; text-align: center; color: #3a3a3c">Shelf card</p>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="posm-h" style="max-width: 1240px; margin: 0 auto; padding: 112px 22px 80px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.18em; color: #c8102e">ON-TRADE POSM</p>
+<h2 id="posm-h" style="margin: 0; font-size: clamp(36px, 4.5vw, 48px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em">Highball On-Trade Materials</h2>
+<p style="margin: 0; max-width: 680px; font-size: 19px; line-height: 1.5; color: #6e6e73">Flyers, table cards, posters and venue partnerships — shown in full at original proportions on the left.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px">
+<figure style="margin: 0; flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 12px">
+<div style="width: 100%; min-height: 320px; border-radius: 28px; overflow: hidden; background: #f0f0f3; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{shown0.has}}" hint-placeholder-val="{{ true }}">
+<img src="{{shown0.src}}" alt="{{shown0.alt}}" style="display: block; max-width: 100%; max-height: 760px; width: auto; height: auto; object-fit: contain">
+</sc-if>
+</div>
+<figcaption style="font-size: 14px; color: #6e6e73; text-align: center">{{shown0.count}}</figcaption>
+</figure>
+<div style="flex: 1 1 200px; max-width: 100%; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 12px">
+<button type="button" onClick="{{swipePrev}}" aria-label="Scroll up" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"></path></svg></button>
+<div ref="{{swipeRef}}" data-reel="0" data-dir="y" role="region" aria-label="Scrollable thumbnails; select one to view it in full on the left" tabIndex="0" style="width: 100%; height: 620px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px; overflow-y: auto; overflow-x: hidden; scroll-snap-type: y proximity; scroll-padding-block: 16px; padding: 16px 6px 160px; scrollbar-width: none; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16px, #000 60%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0, #000 16px, #000 60%, transparent 100%)">
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/1e99e771a1941144df02617c15d9bb52.jpg" alt="Jim Beam Highball A4 DM" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 0%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/6b2f030d3e1096fad9793cbb616f1911.jpg" alt="Jim Beam Highball buy 2 get 1 free table card 10×15" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 0%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/23e9374e12430963f37220a5f8c51998.jpg" alt="Order 3 per table for a brand gift draw — poster 60×40" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 0%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/eb3a9f2f1a1ae9edd34c84de11f8c0d1.jpg" alt="Sawada Sakaba Jim Beam Highball $299 free-flow" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 0%"></button>
+<button class="thumb" type="button" onClick="{{pickThumb}}" aria-label="Show this piece in full on the left" style="flex: 0 0 auto; width: 100%; aspect-ratio: 4 / 5; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; scroll-snap-align: start; background: #f0f0f3"><img src="assets/ecc472cf9b326eb11cd4d4aa4c268d5d.jpg" alt="Datangdian KTV in-venue screen 819×1440" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 0%"></button>
+</div>
+<button type="button" onClick="{{swipeNext}}" aria-label="Scroll down" style="width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8e8ed; color: #1d1d1f; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="kr-h" style="background: #f5f5f7; color: #1d1d1f">
+<div style="max-width: 1240px; margin: 0 auto; padding: 112px 22px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+
+
+
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px">
+<figure style="margin: 0; aspect-ratio: 1697 / 2400; border-radius: 20px; overflow: hidden; background: #ffffff; box-shadow: 0 16px 40px rgba(0,0,0,0.10)"><img src="assets/f78265bd4bcaca41e78a1aec9ed7afbe.jpg" alt="Jim Beam Korea on-trade menu (yellow)" width="1697" height="2400" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+<figure style="margin: 0; aspect-ratio: 1697 / 2400; border-radius: 20px; overflow: hidden; background: #ffffff; box-shadow: 0 16px 40px rgba(0,0,0,0.10)"><img src="assets/6d2e1240e32c880f2433db091fefc4ae.jpg" alt="Jim Beam Korea on-trade menu (red)" width="1697" height="2400" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+<figure style="margin: 0; aspect-ratio: 1697 / 2400; border-radius: 20px; overflow: hidden; background: #ffffff; box-shadow: 0 16px 40px rgba(0,0,0,0.10)"><img src="assets/5509dba1149a5368acebfcf5016f8743.jpg" alt="Jim Beam Korea on-trade menu (green)" width="1697" height="2400" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+<figure style="margin: 0; aspect-ratio: 1697 / 2400; border-radius: 20px; overflow: hidden; background: #ffffff; box-shadow: 0 16px 40px rgba(0,0,0,0.10)"><img src="assets/11aa535eb007528e4f955256743f61fe.jpg" alt="Jim Beam Korea on-trade menu (blue)" width="1697" height="2400" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+<figure style="margin: 0; aspect-ratio: 1697 / 2400; border-radius: 20px; overflow: hidden; background: #ffffff; box-shadow: 0 16px 40px rgba(0,0,0,0.10)"><img src="assets/42d3fcd7356ceba99d1f84b00274d225.jpg" alt="Jim Beam Korea on-trade menu (orange)" width="1697" height="2400" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+<figure style="margin: 0; aspect-ratio: 1697 / 2400; border-radius: 20px; overflow: hidden; background: #ffffff; box-shadow: 0 16px 40px rgba(0,0,0,0.10)"><img src="assets/5c6b4adfb33da03eaebbb0b220ac2e3b.jpg" alt="Jim Beam Korea on-trade menu (purple)" width="1697" height="2400" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="gift-h" style="max-width: 1240px; margin: 0 auto; padding: 112px 22px 80px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.18em; color: #c8102e">PACKAGING</p>
+<h2 id="gift-h" style="margin: 0; font-size: clamp(36px, 4.5vw, 48px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em">Jim Beam 1.75L Gift Boxes, 2025</h2>
+
+</div>
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 32px; width: 100%">
+<figure style="margin: 0; flex: 0.9683 1 0; min-width: 0; aspect-ratio: 2324 / 2400; border-radius: 24px; overflow: hidden; background: #ffffff"><img src="assets/ffefa583021c1a81e47abed28e9915aa.jpg" alt="2025 Jim Beam White gift box 1750ml" width="2324" height="2400" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+<figure style="margin: 0; flex: 1.1875 1 0; min-width: 0; aspect-ratio: 2400 / 2021; border-radius: 24px; overflow: hidden; background: #ffffff"><img src="assets/bbfa7f2f8c960e5ee5e72e19be1679a3.jpg" alt="2025 Jim Beam Black gift box 1750ml" width="2400" height="2021" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+</div>
+</section>
+
+<section aria-labelledby="tee-h" style="max-width: 1240px; margin: 0 auto; padding: 80px 22px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+
+<h2 id="tee-h" style="margin: 0; font-size: clamp(36px, 4.5vw, 48px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em">Jim Beam Merch T-Shirts</h2>
+
+</div>
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 100%">
+<figure style="margin: 0; flex: 1.6667 1 0; min-width: 0; aspect-ratio: 2400 / 1440; border-radius: 24px; overflow: hidden; background: #e8e8ed"><img src="assets/e40bd44897d223b75d5c6b4d3b821869.jpg" alt="T-shirt mock-up 1: mascot hugging the bottle" width="2400" height="1440" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+<figure style="margin: 0; flex: 1.6667 1 0; min-width: 0; aspect-ratio: 2400 / 1440; border-radius: 24px; overflow: hidden; background: #e8e8ed"><img src="assets/4159aac39c42503d92086319d5535551.jpg" alt="T-shirt mock-up 2: Make It a Highball" width="2400" height="1440" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+<figure style="margin: 0; flex: 1.6667 1 0; min-width: 0; aspect-ratio: 2400 / 1440; border-radius: 24px; overflow: hidden; background: #e8e8ed"><img src="assets/de078fafa3a5ec0c6cb4fd4d61537c81.jpg" alt="T-shirt mock-up 3: sticker collage" width="2400" height="1440" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+</div>
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 100%">
+<figure style="margin: 0; flex: 0.9708 1 0; min-width: 0; aspect-ratio: 2330 / 2400; border-radius: 24px; overflow: hidden; background: #e8e8ed"><img src="assets/75b39ad31d89a6fddb238126131355c9.jpg" alt="T-shirt print 1 original artwork" width="2330" height="2400" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+<figure style="margin: 0; flex: 0.9708 1 0; min-width: 0; aspect-ratio: 2330 / 2400; border-radius: 24px; overflow: hidden; background: #e8e8ed"><img src="assets/9814d271060be8a1196fbbbcbcccca8e.jpg" alt="T-shirt print 2 original artwork" width="2330" height="2400" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+<figure style="margin: 0; flex: 0.9708 1 0; min-width: 0; aspect-ratio: 2330 / 2400; border-radius: 24px; overflow: hidden; background: #e8e8ed"><img src="assets/06de5db46426d5f18308668f485a4f01.jpg" alt="T-shirt print 3 original artwork" width="2330" height="2400" style="width: 100%; height: 100%; display: block; object-fit: contain"></figure>
+</div>
+</section>
+
+<section aria-labelledby="big-h" style="background: radial-gradient(120% 90% at 50% 20%, #3a1410 0%, #1a0b08 60%, #0b0504 100%); color: #f5f5f7">
+<div style="max-width: 1240px; margin: 0 auto; padding: 112px 22px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.18em; color: #f2c94c">LARGE FORMAT · ILLUSTRATION</p>
+<h2 id="big-h" style="margin: 0; font-size: clamp(36px, 4.5vw, 48px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em">Large Format &amp; Illustration</h2>
+
+</div>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="width: 100%; aspect-ratio: 4000 / 530; border-radius: 16px; overflow: hidden; background: #1a1a1a; box-shadow: 0 24px 60px rgba(0,0,0,0.35)"><img src="assets/a4ffe629a5fc309c8a0e1c3612acd820.jpg" alt="Hip-hop dog 980 × 130 cm large-format print" width="4000" height="530" style="width: 100%; height: 100%; display: block; object-fit: contain"></div>
+
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="width: 100%; aspect-ratio: 2400 / 1350; border-radius: 24px; overflow: hidden; background: #1a1a1a; box-shadow: 0 24px 60px rgba(0,0,0,0.35)"><img src="assets/8706b02b40479bd7ac4da2b26f2218e7.jpg" alt="Tiger illustration key visual" width="2400" height="1350" style="width: 100%; height: 100%; display: block; object-fit: contain"></div>
+
+</figure>
+</div>
+</section>
+
+<section aria-label="Next Project" style="max-width: 1240px; margin: 0 auto; padding: 112px 22px 96px">
+<a class="next" href="Kakubin.dc.html" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
+<span style="font-size: 17px; font-weight: 600; color: #6e6e73">Next Project</span>
+<span style="font-size: clamp(40px, 6vw, 72px); line-height: 1.05; font-weight: 700; letter-spacing: -0.025em">Kakubin ›</span>
+</a>
+</section>
+
+</main><footer style="border-top: 1px solid rgba(0,0,0,0.1)">
+
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"tone":{"editor":"color","default":"#5c1414","options":["#5c1414","#1d1d1f","#0f2a3d","#3d2f1a"],"section":"Appearance"},"glassX":{"editor":"range","default":50,"min":5,"max":95,"step":1,"unit":"%","section":"Glass title"},"glassY":{"editor":"range","default":50,"min":5,"max":95,"step":1,"unit":"%","section":"Glass title"},"glassScale":{"editor":"range","default":1,"min":0.5,"max":1.6,"step":0.05,"section":"Glass title"},"glassBlur":{"editor":"range","default":22,"min":0,"max":48,"step":1,"unit":"px","section":"Glass title"},"glassTint":{"editor":"range","default":10,"min":0,"max":40,"step":1,"unit":"%","section":"Glass title"},"$preview":{"width":1440,"height":4400}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { reels: {}, muted: true, volume: 0.8, flavorLang: 'zh' };
+    this.tracks = {};
+    this.setHero = (el) => { this.hero = el; if (el) el.muted = true; };
+    this.playHero = () => { const v = this.hero; if (v) { v.muted = true; const pr = v.play(); if (pr && pr.catch) pr.catch(() => {}); } };
+    this.setSwipe = (el) => {
+      if (!el) return;
+      if (el.hasAttribute('data-vreel')) this.vtrack = el;
+      else if (el.hasAttribute('data-reel')) this.tracks[el.getAttribute('data-reel')] = el;
+    };
+    // Video carousel: thumbnails carry the clip and its shape; the player above shows it whole.
+    this.applySound = () => { const v = this.player; if (v) { v.volume = this.state.volume; v.muted = this.state.muted; } };
+    this.startPlay = (v) => {
+      if (!v) return;
+      this.applySound();
+      const pr = v.play();
+      if (pr && pr.catch) pr.catch(() => { v.muted = true; this.setState({ muted: true }); const p2 = v.play(); if (p2 && p2.catch) p2.catch(() => {}); });
+    };
+    this.setPlayer = (el) => { this.player = el; if (el) { el.volume = this.state.volume; el.muted = this.state.muted; } };
+    this.playVideo = () => this.startPlay(this.player);
+    this.showVideo = (btn) => {
+      const track = btn && btn.closest('[data-vreel]');
+      if (!track) return;
+      const all = Array.from(track.querySelectorAll('button'));
+      all.forEach((b) => b.removeAttribute('data-on'));
+      btn.setAttribute('data-on', '');
+      const v = btn.querySelector('video');
+      const src = v ? (v.getAttribute('src') || '') : '';
+      const ratio = btn.getAttribute('data-ratio') || '16 / 9';
+      this.setState({ video: { src, ratio, n: all.indexOf(btn) + 1, total: all.length } });
+    };
+    this.pickVideo = (e) => this.showVideo(e.currentTarget);
+    this.toggleSound = () => {
+      const muted = !this.state.muted;
+      const volume = !muted && this.state.volume === 0 ? 0.6 : this.state.volume;
+      this.setState({ muted, volume }, () => { this.applySound(); if (this.player && this.player.paused) this.startPlay(this.player); });
+    };
+    this.setVolume = (e) => {
+      const volume = Math.max(0, Math.min(1, Number(e.target.value) / 100));
+      this.setState({ volume, muted: volume === 0 }, this.applySound);
+    };
+    this.syncSound = (e) => {
+      const v = e.currentTarget;
+      if (v.muted !== this.state.muted || Math.abs(v.volume - this.state.volume) > 0.001) {
+        this.setState({ muted: v.muted, volume: v.volume }, this.applySound);
+      }
+    };
+
+    const trackOf = (node) => { const box = node && node.closest('[data-group], section'); return box ? box.querySelector('[data-reel], [data-vreel]') : null; };
+    const move = (e, dir) => {
+      const el = trackOf(e.currentTarget);
+      if (!el) return;
+      if (el.getAttribute('data-dir') === 'y') el.scrollBy({ top: dir * el.clientHeight * 0.8, behavior: 'smooth' });
+      else el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: 'smooth' });
+    };
+    this.swipePrev = (e) => move(e, -1);
+    this.swipeNext = (e) => move(e, 1);
+    this.show = (btn) => {
+      const track = btn && btn.closest('[data-reel]');
+      const img = btn && btn.querySelector('img');
+      if (!track || !img) return;
+      const all = Array.from(track.querySelectorAll('button'));
+      all.forEach((b) => b.removeAttribute('data-on'));
+      btn.setAttribute('data-on', '');
+      const id = track.getAttribute('data-reel');
+      const entry = { src: img.getAttribute('src') || '', alt: img.getAttribute('alt') || '', n: all.indexOf(btn) + 1, total: all.length };
+      this.setState((st) => ({ reels: { ...st.reels, [id]: entry } }));
+    };
+    this.pickThumb = (e) => this.show(e.currentTarget);
+    // Wheel sync: scrolling a thumbnail strip with the mouse wheel moves the strip and updates the big preview.
+    this.wheelSync = (el) => {
+      if (!el || el.__wheelSync) return;
+      el.__wheelSync = true;
+      const vertical = () => el.getAttribute('data-dir') === 'y';
+      let raf = 0;
+      const pick = () => {
+        raf = 0;
+        const btns = Array.from(el.querySelectorAll('button'));
+        if (!btns.length) return;
+        const cs = getComputedStyle(el);
+        const y = vertical();
+        const pad = parseFloat(y ? (cs.scrollPaddingTop || cs.paddingTop) : (cs.scrollPaddingLeft || cs.paddingLeft)) || 0;
+        const box = el.getBoundingClientRect();
+        const focus = (y ? box.top : box.left) + pad;
+        const atEnd = y ? el.scrollTop + el.clientHeight >= el.scrollHeight - 2 : el.scrollLeft + el.clientWidth >= el.scrollWidth - 2;
+        let best = btns[0], dist = Infinity;
+        btns.forEach((b) => { const r = b.getBoundingClientRect(); const d = Math.abs((y ? r.top : r.left) - focus); if (d < dist) { dist = d; best = b; } });
+        if (atEnd && dist > 24) best = btns[btns.length - 1];
+        if (!best.hasAttribute('data-on')) this.show(best);
+      };
+      el.addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(pick); }, { passive: true });
+      el.addEventListener('wheel', (e) => {
+        if (vertical() || Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+        const max = el.scrollWidth - el.clientWidth;
+        if ((e.deltaY > 0 && el.scrollLeft < max - 1) || (e.deltaY < 0 && el.scrollLeft > 1)) { e.preventDefault(); el.scrollLeft += e.deltaY; }
+      }, { passive: false });
+    };
+    const _setSwipe = this.setSwipe;
+    this.setSwipe = (el) => { _setSwipe(el); if (el && el.hasAttribute('data-reel')) this.wheelSync(el); };
+    this.flavorZh = () => this.setState({ flavorLang: 'zh' });
+    this.flavorEn = () => this.setState({ flavorLang: 'en' });
+    this.state.banner = 0;
+    this.state.bannerCount = 0;
+    this.setBanner = (el) => { this.bannerEl = el; };
+    this.slideCount = () => (this.bannerEl ? this.bannerEl.children.length : 0);
+    this.goBanner = (i) => {
+      const n = this.slideCount() || 1;
+      this.setState({ banner: ((i % n) + n) % n, bannerCount: this.slideCount() });
+    };
+    this.syncBanner = () => {
+      const n = this.slideCount();
+      if (n !== this.state.bannerCount) {
+        this.setState({ bannerCount: n, banner: Math.min(this.state.banner || 0, Math.max(n - 1, 0)) });
+        this.bannerMeasure();
+      }
+      const still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (n > 1 && !still && !this.timer) this.timer = setInterval(this.tick, 4000);
+    };
+    this.tick = () => { this.bannerMeasure(); if (!this.paused) this.goBanner(this.state.banner + 1); };
+    this.state.bannerRatio = '4 / 3';
+    this.bannerMeasure = () => {
+      const box = this.bannerEl;
+      if (!box) return;
+      let best = 0;
+      box.querySelectorAll('img').forEach((im) => {
+        if (im.naturalWidth && im.naturalHeight) {
+          const r = im.naturalHeight / im.naturalWidth;
+          if (r > best) best = r;
+        }
+      });
+      if (best) {
+        const ratio = '1 / ' + best.toFixed(4);
+        if (ratio !== this.state.bannerRatio) this.setState({ bannerRatio: ratio });
+      }
+    };
+    this.bannerPause = () => { this.paused = true; };
+    this.bannerResume = () => { this.paused = false; };
+  }
+  componentWillUnmount() { if (this.timer) clearInterval(this.timer); if (this.bannerObs) this.bannerObs.disconnect(); }
+  componentDidMount() {
+    Object.keys(this.tracks).forEach((id) => {
+      const first = this.tracks[id].querySelector('button');
+      if (first) this.show(first);
+    });
+    const vfirst = this.vtrack && this.vtrack.querySelector('button');
+    if (vfirst) this.showVideo(vfirst);
+    this.bannerMeasure();
+    this.syncBanner();
+    if (this.bannerEl && window.MutationObserver) {
+      this.bannerObs = new MutationObserver(() => { this.syncBanner(); this.bannerMeasure(); });
+      this.bannerObs.observe(this.bannerEl, { childList: true, subtree: true, attributes: true, attributeFilter: ['src'] });
+    }
+  }
+  componentDidUpdate() { this.syncBanner(); }
+  renderVals() {
+    const view = (id) => {
+      const r = this.state.reels[id] || {};
+      return { has: !!r.src, src: r.src || '', alt: r.alt || '', count: r.total ? r.n + ' / ' + r.total : '' };
+    };
+    const p = this.props;
+    const num = (v, d) => (typeof v === 'number' && isFinite(v) ? v : d);
+    const glass = {
+      x: num(p.glassX, 50) + '%', y: num(p.glassY, 50) + '%', scale: num(p.glassScale, 1),
+      blur: num(p.glassBlur, 22), tint: num(p.glassTint, 10) / 100
+    };
+    const fz = this.state.flavorLang !== 'en';
+    const flavor = {
+      zh: this.flavorZh, en: this.flavorEn,
+      zhOn: fz, enOn: !fz,
+      zhBg: fz ? '#ffffff' : 'transparent', zhFg: fz ? '#3a0d12' : 'rgba(255,255,255,0.8)',
+      enBg: !fz ? '#ffffff' : 'transparent', enFg: !fz ? '#3a0d12' : 'rgba(255,255,255,0.8)'
+    };
+    const bi = this.state.banner || 0;
+    const banner = {
+      shift: 'translateY(-' + (bi * 100) + '%)', ratio: this.state.bannerRatio,
+      dots: Array.from({ length: this.state.bannerCount || 0 }, (_, k) => ({
+        n: k + 1, pressed: k === bi ? 'true' : 'false',
+        h: k === bi ? '22px' : '8px', bg: k === bi ? '#ffffff' : 'rgba(255,255,255,0.55)',
+        pick: () => this.goBanner(k)
+      }))
+    };
+    const vv = this.state.video || {};
+    const tall = (() => { const q = String(vv.ratio || '16 / 9').split('/').map(Number); return q[1] > q[0]; })();
+    const vshown = {
+      has: !!vv.src, empty: !vv.src, src: vv.src || '',
+      count: vv.total ? vv.n + ' / ' + vv.total : '',
+      ratio: vv.ratio || '16 / 9',
+      w: tall ? 'min(100%, 480px)' : '100%'
+    };
+    const muted = this.state.muted;
+    const sound = {
+      muted, on: !muted, pressed: muted ? 'false' : 'true',
+      label: muted ? 'Turn sound on' : 'Turn sound off',
+      pct: Math.round((muted ? 0 : this.state.volume) * 100)
+    };
+    return {
+      flavor, banner, bannerRef: this.setBanner, bannerMeasure: this.bannerMeasure, bannerPause: this.bannerPause, bannerResume: this.bannerResume,
+      vshown, sound, playerRef: this.setPlayer, playVideo: this.playVideo, pickVideo: this.pickVideo,
+      toggleSound: this.toggleSound, setVolume: this.setVolume, syncSound: this.syncSound,
+      glass, heroRef: this.setHero, playHero: this.playHero,
+      shown0: view('0'), shown1: view('1'), shown2: view('2'),
+      pickThumb: this.pickThumb, swipeRef: this.setSwipe, swipePrev: this.swipePrev, swipeNext: this.swipeNext,
+      tone: this.props.tone ?? '#5c1414'
+    };
+  }
+}
+</script>
+</body>
+</html>
